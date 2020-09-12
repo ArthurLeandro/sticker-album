@@ -1,0 +1,42 @@
+<mat-toolbar style="background-color: cadetblue">
+  <button mat-icon-button [matMenuTriggerFor]='menu'>
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu #menu='matMenu'>
+    <button mat-menu-item routerLink="/introduction" routerLinkActive="selected">
+      <mat-icon>home</mat-icon>
+      <span>Home</span>
+    </button>
+    <button mat-menu-item routerLink="/signup" routerLinkActive="selected">
+      <mat-icon>photo_library</mat-icon>
+      <span>Albuns</span>
+    </button>
+    <button mat-menu-item routerLink="/store" routerLinkActive="selected">
+      <mat-icon>add_shopping_cart</mat-icon>
+      <span>Comprar</span>
+    </button>
+    <button mat-menu-item routerLink="/contact" routerLinkActive="selected">
+      <mat-icon>contact_page</mat-icon>
+      <span>Fale conosco</span>
+    </button>
+    <button mat-menu-item routerLink="/about" routerLinkActive="selected">
+      <mat-icon>copyright</mat-icon>
+      <span>Créditos</span>
+    </button>
+    <button mat-menu-item routerLink="/developer" routerLinkActive="selected">
+      <mat-icon>computer</mat-icon>
+      <span>Desenvolvedor</span>
+    </button>
+  </mat-menu>
+
+  <span class="toolbar-spacer"></span>
+
+  <div style="float:right">
+    <button mat-icon-button routerLink="/login" routerLinkActive="selected" title="Perfil">
+      <mat-icon>account_circle</mat-icon>
+    </button>
+    <button mat-icon-button routerLink="/logout" routerLinkActive="selected" title="Sair">
+      <mat-icon>exit_to_app</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>

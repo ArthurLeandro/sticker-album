@@ -1,0 +1,48 @@
+<owl-carousel-o id="custom1" [options]="customOptions">
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="../assets/images/new_capa-min.png">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+      <div class="slide">
+          <img src="../assets/images/image_1.png">
+      </div>
+  </ng-template>
+  <ng-template carouselSlide>
+      <div class="slide">
+        <img src="../assets/images/image_2.png">
+      </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="../assets/images/image_3.png">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="../assets/images/image_4.png">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="../assets/images/image_5_960x604.png">
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide">
+      <img src="../assets/images/new_contra-min.png">
+    </div>
+  </ng-template>
+</owl-carousel-o>
+
+<script>
+  $('.custom1').owlCarousel({
+    animateOut: 'slideOutDown',
+    animateIn: 'flipInX',
+    items:1,
+    margin:30,
+    stagePadding:30,
+    smartSpeed:450
+  });
+</script>

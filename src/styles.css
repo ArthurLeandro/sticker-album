@@ -1,0 +1,37 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+body {
+  /* top: 20; */
+  background-color: #f5f5f0;
+  /*background-image: url("/assets/images/notebook-background.jpg");*/
+}
+
+.selected {
+  font-weight: bold;
+}
+
+/* You can add global styles to this file, and also import other style files */
+a {
+  cursor: pointer;
+}
+
+.app-container {
+  min-height: 320px;
+  overflow: hidden;
+}
+
+.btn-delete-user {
+  width: 40px;
+  text-align: center;
+  box-sizing: content-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

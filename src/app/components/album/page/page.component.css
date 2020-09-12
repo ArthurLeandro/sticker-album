@@ -1,0 +1,12 @@
+.slide {
+  background-image: url("/assets/images/imagem_fundo_250x353.png");
+  height: 350px;
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+img {
+  max-width: 110px;
+  max-height: 160px;
+}
