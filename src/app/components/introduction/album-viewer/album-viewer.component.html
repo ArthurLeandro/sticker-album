@@ -1,0 +1,37 @@
+<div class="background">
+  <div class="row">
+    <div class="image-background col-12 col-sm-12 col-md-8"></div>
+    <div class="content">
+      <h3 class="col-12 col-sm-12 col-md-12">
+        <a mat-button href="">{{ title }}</a>
+      </h3>
+      <button
+        mat-mini-fab
+        [color]="likeBasic"
+        aria-label="Example icon button with a heart icon"
+        (click)="OnLiked()"
+      >
+        <span *ngIf="like" class="material-icons">start</span>
+        <span *ngIf="!like" class="material-icons"> star_outline </span>
+      </button>
+      <button
+        mat-mini-fab
+        [color]="loveBasic"
+        aria-label="Example icon button with a heart icon"
+        (click)="OnLoved()"
+      >
+        <span *ngIf="love" class="material-icons"> favorite </span>
+        <span *ngIf="!love" class="material-icons"> favorite_border </span>
+      </button>
+      <button
+        mat-mini-fab
+        [color]="cartBasic"
+        aria-label="Example icon button with a heart icon"
+        (click)="OnAddShopingList()"
+      >
+        <span *ngIf="cart" class="material-icons"> add_shopping_cart </span>
+        <span *ngIf="!cart" class="material-icons"> remove_shopping_cart </span>
+      </button>
+    </div>
+  </div>
+</div>

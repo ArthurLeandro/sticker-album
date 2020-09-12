@@ -1,0 +1,10 @@
+.background {
+  padding: .4em;
+}
+
+.image {
+  padding: .1em;
+  background-color: tomato;
+  width: 90%;
+  height: 90%;
+}

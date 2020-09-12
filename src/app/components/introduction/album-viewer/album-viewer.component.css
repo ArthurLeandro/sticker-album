@@ -1,0 +1,18 @@
+button {
+  margin-right: 5px;
+}
+
+h3 {
+  color: rgba(46, 46, 46, 1.0);
+}
+
+.background {
+  padding: 0.2em;
+  margin: 1.6em;
+}
+
+.image-background {
+  width: 120PX;
+  height: 100px;
+  background-color: tomato;
+}
