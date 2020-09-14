@@ -1,0 +1,38 @@
+.background {
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  background: rgb(222, 182, 98);
+  background: radial-gradient(circle, rgb(255, 221, 151) 32%, rgb(255, 233, 188) 100%);
+}
+
+.content {
+  padding: 4em;
+  color: rgb(12, 12, 12);
+  height: 90vh;
+}
+
+h4,
+h1 {
+  text-transform: uppercase;
+}
+
+.landing-company-title {
+  font-size: 32px;
+  padding-top: 36px;
+}
+
+.landing-title {
+  font-size: 48px;
+  padding-top: 38px;
+}
+
+.landing-content {
+  font-size: 18px;
+  padding-top: 32px;
+}
+
+.btn {
+  margin-left: 12px;
+  padding-top: 6px;
+}

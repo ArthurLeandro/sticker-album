@@ -19,14 +19,12 @@ import { UnauthorizedComponent } from "./views/unauthorized/unauthorized.compone
 import { UnauthenticatedComponent } from "./views/unauthenticated/unauthenticated.component";
 import { StoreComponent } from "./views/store/store.component";
 import { AlbumView } from "./views/album-view/album-view.component";
+
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
-  // { path: "", redirectTo: "introduction", pathMatch: "full" },
   { path: "login", component: LoginComponent },
+  { path: "log", redirectTo: "login" },
   { path: "signup", component: SignupComponent },
-  { path: "error", component: ErrorComponent },
-  { path: "unauthorized", component: UnauthorizedComponent },
-  { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "about", component: AboutComponent },
   { path: "admin", component: AdminComponent },
   { path: "contact", component: ContactComponent },
@@ -36,11 +34,15 @@ const routes: Routes = [
   { path: "store", component: StoreComponent },
   { path: "reports", component: ReportsComponent },
   { path: "album_view", component: AlbumView },
+  { path: "error", component: ErrorComponent },
+  { path: "unauthorized", component: UnauthorizedComponent },
+  { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "**", component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
+  providers: [AuthGuard],
 })
 export class AppRoutingModule {}

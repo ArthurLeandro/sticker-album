@@ -3,6 +3,7 @@
 body {
   /* top: 20; */
   /*background-image: url("/assets/images/notebook-background.jpg");*/
+
 }
 
 .selected {
@@ -27,6 +28,7 @@ a {
 
 html,
 body {
+  background: rgb(222, 182, 98);
   height: 100%;
 }
 
