@@ -1,0 +1,27 @@
+<div class="sell-card">
+  <div class="background row">
+    <img class="col-12" [src]="urlImage" alt="" />
+    <div class="content col-12">
+      <p class="content-description">{{ description }}</p>
+      <p class="content-price">{{ price | currency: "R$" }}</p>
+    </div>
+    <div class="action row">
+      <div class="col-6 col-md-6">
+        <button class="content-action-cart">
+          <span class="material-icons"> add_shopping_cart </span>Adicione ao
+          carrinho
+        </button>
+      </div>
+      <div class="col-2 col-md-2">
+        <button class="content-action-heart">
+          <span class="material-icons"> favorite </span>
+        </button>
+      </div>
+      <div class="col-2 col-md-2">
+        <button class="content-action-star">
+          <span class="material-icons"> star </span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

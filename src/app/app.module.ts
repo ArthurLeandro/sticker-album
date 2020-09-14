@@ -55,6 +55,7 @@ import { AlbumSliderComponent } from "./components/introduction/album-slider/alb
 import { AlbumSideViewComponent } from "./components/introduction/album-side-view/album-side-view.component";
 import { LandingPageComponent } from "./views/landing-page/landing-page.component";
 import { AlbumView } from "./views/album-view/album-view.component";
+import { SellCardComponent } from './components/store/sell-card/sell-card.component';
 
 @NgModule({
   imports: [
@@ -114,6 +115,7 @@ import { AlbumView } from "./views/album-view/album-view.component";
     AlbumSideViewComponent,
     LandingPageComponent,
     AlbumView,
+    SellCardComponent,
   ],
   bootstrap: [AppComponent],
 })

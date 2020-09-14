@@ -1,1 +1,36 @@
-<p>store works!</p>
+<div class="row background">
+  <div class="col-12 d-flex justify-content-center">
+    <div class="content">
+      <h1 class="landing-title">Catalogo</h1>
+      <p class="landing-content">Encontre o que precisa para sua coleção.</p>
+      <a [routerLink]="['/']" class="btn btn-outline-dark">Saiba mais</a>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="offset-1 col-3">
+    <mat-list>
+      <h4 class="landing-title justify-content-center d-flex">
+        Categorias de Produtos
+      </h4>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <span class="material-icons"> receipt </span>
+        <a mat-button [routerLink]="['/store']">Figurinhas</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <mat-list-item>
+        <span class="material-icons"> book </span>
+        <a mat-button [routerLink]="['/store']">Álbuns</a>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+  <div class="col-7 items-list">
+    <div class="row">
+      <div class="col-4"><app-sell-card></app-sell-card></div>
+      <div class="col-4"><app-sell-card></app-sell-card></div>
+      <div class="col-4"><app-sell-card></app-sell-card></div>
+    </div>
+  </div>
+</div>
