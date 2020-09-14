@@ -1,0 +1,27 @@
+/* .sticker {
+  position: relative; */
+  /* text-align: center; */
+  /* transform: translate(0%, 0%); */
+
+/* } */
+
+/* .centered {
+  position: absolute;
+  /*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 88 por cento*/
+  /* top: 44%; */
+  /*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 14 por cento*/
+  /* left: 7%; */
+
+  /* transform: translate(-50%, -50%); 
+  color: white;
+} */
+/* 
+.sticker-text-background {
+  background-color: rgb(53, 40, 12);
+  width: 16px;
+  height: 20px;
+}
+
+.sticker-content {
+  max-width: 12.5%;
+} */

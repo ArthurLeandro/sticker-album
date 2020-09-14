@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Input } from '@angular/core';
 
 @Component({
   selector: 'app-front-cover',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./front-cover.component.css']
 })
 export class FrontCoverComponent implements OnInit {
+
+  @Input() urlImage:string = "";
 
   constructor() { }
 

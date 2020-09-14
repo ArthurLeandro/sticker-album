@@ -1,48 +1,75 @@
-<owl-carousel-o id="custom1" [options]="customOptions">
+<owl-carousel-o class="page-background" id="custom1" [options]="customOptions">
   <ng-template carouselSlide>
     <div class="slide">
-      <img src="../assets/images/new_capa-min.png">
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-      <div class="slide">
-          <img src="../assets/images/image_1.png">
-      </div>
-  </ng-template>
-  <ng-template carouselSlide>
-      <div class="slide">
-        <img src="../assets/images/image_2.png">
-      </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <img src="../assets/images/image_3.png">
+      <app-front-cover [urlImage]="pages['cover']"></app-front-cover>
     </div>
   </ng-template>
   <ng-template carouselSlide>
     <div class="slide">
-      <img src="../assets/images/image_4.png">
+      <app-sticker
+        [urlImage]="pages['page1']"
+        [stickerContent]="pagesContent['page1']"
+      ></app-sticker>
+      <!-- <div><img class="sticker" src="../assets/images/image_1.png" /></div>
+      <div><p class="sticker-text">SAMPLE TEXT</p></div> -->
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide slide-sticker">
+      <app-sticker
+        [urlImage]="pages['page1']"
+        [stickerContent]="pagesContent['page1']"
+      ></app-sticker>
+      <!-- <img class="sticker" src="../assets/images/image_2.png" />
+      <p class="sticker-text">SAMPLE TEXT</p> -->
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide slide-sticker">
+      <app-sticker
+        [urlImage]="pages['page2']"
+        [stickerContent]="pagesContent['page2']"
+      ></app-sticker>
+      <!-- <img class="sticker" src="../assets/images/image_3.png" />
+      <p class="sticker-text">SAMPLE TEXT</p> -->
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide slide-sticker">
+      <app-sticker
+        [urlImage]="pages['page3']"
+        [stickerContent]="pagesContent['page3']"
+      ></app-sticker>
+      <!-- <img class="sticker" src="../assets/images/image_4.png" />
+      <p class="sticker-text">SAMPLE TEXT</p> -->
+    </div>
+  </ng-template>
+  <ng-template carouselSlide>
+    <div class="slide slide-sticker">
+      <app-sticker
+        [urlImage]="pages[page4]"
+        [stickerContent]="pagesContent[page4]"
+      ></app-sticker>
+      <!-- <img class="sticker" src="../assets/images/image_5_960x604.png" />
+      <p class="sticker-text">SAMPLE TEXT</p> -->
     </div>
   </ng-template>
   <ng-template carouselSlide>
     <div class="slide">
-      <img src="../assets/images/image_5_960x604.png">
-    </div>
-  </ng-template>
-  <ng-template carouselSlide>
-    <div class="slide">
-      <img src="../assets/images/new_contra-min.png">
+      <!-- <img src="../assets/images/new_contra-min.png" /> -->
+
+      <app-front-cover [urlImage]="pages['backCover']"></app-front-cover>
     </div>
   </ng-template>
 </owl-carousel-o>
 
 <script>
-  $('.custom1').owlCarousel({
-    animateOut: 'slideOutDown',
-    animateIn: 'flipInX',
-    items:1,
-    margin:30,
-    stagePadding:30,
-    smartSpeed:450
+  $(".custom1").owlCarousel({
+    animateOut: "slideOutDown",
+    animateIn: "flipInX",
+    items: 1,
+    margin: 30,
+    stagePadding: 30,
+    smartSpeed: 450,
   });
 </script>

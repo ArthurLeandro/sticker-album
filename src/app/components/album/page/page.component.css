@@ -1,12 +1,33 @@
 .slide {
   background-image: url("/assets/images/imagem_fundo_250x353.png");
-  height: 350px;
-
+  height: 75vh;
+  position: relative;
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 img {
-  max-width: 110px;
-  max-height: 160px;
+  min-width: 240px;
+  min-height: 280px;
+  max-width: 380px;
+  max-height: 440px;
+}
+
+#custom1 {
+  padding: 32px;
+}
+
+.sticker {
+  position: absolute;
+  transform: translate(0%, 0%);
+}
+
+.sticker-text {
+  /* position: relative; */
+}
+
+
+.slide-sticker {
+  /*fazer ocupar a página toda */
+
 }

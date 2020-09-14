@@ -51,8 +51,10 @@ import { IntroductionViewerComponent } from "./components/introduction/introduct
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { MatMenuModule } from "@angular/material/menu";
 import { AlbumViewerComponent } from "./components/introduction/album-viewer/album-viewer.component";
-import { AlbumSliderComponent } from './components/introduction/album-slider/album-slider.component';
-import { AlbumSideViewComponent } from './components/introduction/album-side-view/album-side-view.component';
+import { AlbumSliderComponent } from "./components/introduction/album-slider/album-slider.component";
+import { AlbumSideViewComponent } from "./components/introduction/album-side-view/album-side-view.component";
+import { LandingPageComponent } from "./views/landing-page/landing-page.component";
+import { AlbumView } from "./views/album-view/album-view.component";
 
 @NgModule({
   imports: [
@@ -110,6 +112,8 @@ import { AlbumSideViewComponent } from './components/introduction/album-side-vie
     IntroductionViewerComponent,
     AlbumSliderComponent,
     AlbumSideViewComponent,
+    LandingPageComponent,
+    AlbumView,
   ],
   bootstrap: [AppComponent],
 })
