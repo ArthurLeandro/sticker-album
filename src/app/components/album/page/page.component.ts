@@ -21,12 +21,14 @@ export class PageComponent implements OnInit {
   };
   pagesContent: { [key: string]: string } = {
     cover: "",
-    page1: "1",
-    page2: "2",
-    page3: "3",
-    page4: "4",
+    page1: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    page2: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    page3: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
+    page4: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. ",
     back: "",
   };
+  public controller: boolean = true;
+
   constructor() {}
 
   ngOnInit(): void {

@@ -7,10 +7,10 @@
 }
 
 img {
-  min-width: 240px;
-  min-height: 280px;
-  max-width: 380px;
-  max-height: 440px;
+  width: 240px;
+  height: 280px;
+  /* max-width: 380px;
+  max-height: 440px; */
 }
 
 #custom1 {

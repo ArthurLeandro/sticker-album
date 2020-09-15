@@ -1,18 +1,18 @@
 /* .sticker {
   position: relative; */
-  /* text-align: center; */
-  /* transform: translate(0%, 0%); */
+/* text-align: center; */
+/* transform: translate(0%, 0%); */
 
 /* } */
 
 /* .centered {
   position: absolute;
   /*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 88 por cento*/
-  /* top: 44%; */
-  /*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 14 por cento*/
-  /* left: 7%; */
+/* top: 44%; */
+/*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 14 por cento*/
+/* left: 7%; */
 
-  /* transform: translate(-50%, -50%); 
+/* transform: translate(-50%, -50%); 
   color: white;
 } */
 /* 
@@ -25,3 +25,12 @@
 .sticker-content {
   max-width: 12.5%;
 } */
+
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 50%;
+  height: auto;
+  max-height: 400px;
+}

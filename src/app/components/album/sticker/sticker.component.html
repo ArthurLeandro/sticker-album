@@ -1,4 +1,26 @@
-<div class="row">
-  <img class="col-10 "[src]="urlImage" alt="" />
-  <p class="col-2">{{ stickerContent }}</p>
+<div>
+  <div *ngIf="leftSide == true" class="row">
+    <p class="col-2">{{ stickerContent }}</p>
+    <img class="col-10 image" [src]="urlImage" alt="" />
+  </div>
+  <div *ngIf="upSide == true" class="row">
+    <div class="row">
+      <img class="col-12 image" [src]="urlImage" alt="" />
+    </div>
+    <div class="row">
+      <p class="col-12">{{ stickerContent }}</p>
+    </div>
+  </div>
+  <div *ngIf="downSide == true" class="row">
+    <div class="row">
+      <p class="col-12">{{ stickerContent }}</p>
+    </div>
+    <div class="row">
+      <img class="col-12 image" [src]="urlImage" alt="" />
+    </div>
+  </div>
+  <div *ngIf="rightSide == true" class="row">
+    <img class="col-10 image" [src]="urlImage" alt="" />
+    <p class="col-2">{{ stickerContent }}</p>
+  </div>
 </div>
