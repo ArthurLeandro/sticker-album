@@ -1,5 +1,8 @@
 .content-price {
-  color: rgba(255, 0, 0, .75);
+  color: rgba(255, 0, 0, 0.75);
+}
+.content-product-name {
+  color: #4e46ec;
 }
 
 .sell-card {
@@ -9,12 +12,13 @@
 .background {
   padding: 4px;
   margin: 2px;
-  border: solid 1px rgba(0, 0, 0, .12);
+  border: solid 1px rgba(0, 0, 0, 0.12);
 }
 
-button {
-  border: none;
-  width: 100%;
+.sell-card-image {
+  background-color: tomato;
+  min-width: 100px;
+  min-height: 150px;
 }
 
 /* .content-action-cart {
