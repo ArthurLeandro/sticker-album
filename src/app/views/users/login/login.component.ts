@@ -9,7 +9,9 @@ import {
 } from "src/app/components/confirm-dialog/confirm-dialog.component";
 import { MatDialog } from "@angular/material/dialog";
 
-@Component({ templateUrl: "login.component.html" })
+@Component({
+  templateUrl: "login.component.html",
+})
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   loading = false;
@@ -26,7 +28,7 @@ export class LoginComponent implements OnInit {
     public dialog: MatDialog
   ) {
     if (this.authService.userValue) {
-      this.router.navigate(["/login"]); //TODO utilizar o auth service aqui tava mandando para o "/" tem que descobrir o pq
+      this.router.navigate(["/introduction"]); //TODO utilizar o auth service aqui tava mandando para o "/" tem que descobrir o pq
     }
   }
 
@@ -57,9 +59,15 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (data) => {
           // this.router.navigate([this.returnUrl]);
-          this.router.navigate([["../login"], { relativeTo: this.route }]);
+          this.router.navigate([
+            ["../introduction"],
+            {
+              relativeTo: this.route,
+            },
+          ]);
         },
         (error) => {
+          console.log("Error occurred during auth " + error);
           this.alertService.error(error);
           this.loading = false;
         }

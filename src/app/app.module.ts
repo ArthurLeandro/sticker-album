@@ -55,7 +55,8 @@ import { AlbumSliderComponent } from "./components/introduction/album-slider/alb
 import { AlbumSideViewComponent } from "./components/introduction/album-side-view/album-side-view.component";
 import { LandingPageComponent } from "./views/landing-page/landing-page.component";
 import { AlbumView } from "./views/album-view/album-view.component";
-import { SellCardComponent } from './components/store/sell-card/sell-card.component';
+import { SellCardComponent } from "./components/store/sell-card/sell-card.component";
+import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dialog.component";
 
 @NgModule({
   imports: [
@@ -87,6 +88,7 @@ import { SellCardComponent } from './components/store/sell-card/sell-card.compon
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     fakeBackendProvider,
   ],
+  entryComponents: [BuyerDialogComponent],
   declarations: [
     AboutComponent,
     AdminComponent,
@@ -116,6 +118,7 @@ import { SellCardComponent } from './components/store/sell-card/sell-card.compon
     LandingPageComponent,
     AlbumView,
     SellCardComponent,
+    BuyerDialogComponent,
   ],
   bootstrap: [AppComponent],
 })

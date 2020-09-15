@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     ) {
         // redirect to home if already logged in
         if (this.authService.userValue) {
-            this.router.navigate(['/']);
+            this.router.navigate(['/introduction']);
         }
     }
 

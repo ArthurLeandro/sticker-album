@@ -23,7 +23,6 @@ import { AlbumView } from "./views/album-view/album-view.component";
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
   { path: "login", component: LoginComponent },
-  { path: "log", redirectTo: "login" },
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent },
   { path: "admin", component: AdminComponent },
@@ -33,10 +32,11 @@ const routes: Routes = [
   { path: "payment", component: PaymentComponent },
   { path: "store", component: StoreComponent },
   { path: "reports", component: ReportsComponent },
-  { path: "album_view", component: AlbumView },
+  { path: "album-view", component: AlbumView },
   { path: "error", component: ErrorComponent },
   { path: "unauthorized", component: UnauthorizedComponent },
   { path: "unauthenticated", component: UnauthenticatedComponent },
+  { path: "logout", redirectTo: "introduction" },
   { path: "**", component: NotFoundComponent },
 ];
 

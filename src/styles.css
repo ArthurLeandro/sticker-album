@@ -28,7 +28,8 @@ a {
 
 html,
 body {
-  background: rgb(222, 182, 98);
+  /* background: rgb(222, 182, 98); */
+  background: white;
   height: 100%;
 }
 

@@ -49,6 +49,10 @@ li {
   padding-top: 6px;
 }
 
-.lilst-items {
+.list-items {
   padding-top: 12px;
+}
+
+.items-list {
+  background-color: white;
 }
