@@ -45,6 +45,20 @@ export class AllStickers {
   public Init(): void {
     this.allStickers = [
       new Sticker(
+        "../../assets/images/new_capa-min.png",
+        "",
+        0,
+        SideOfSticker.LEFT,
+        TypeOfSticker.ONLY_ONE_IN_PAGE
+      ),
+      new Sticker(
+        "../../assets/images/indice.png",
+        "",
+        0,
+        SideOfSticker.ABOVE,
+        TypeOfSticker.ONLY_ONE_IN_PAGE
+      ),
+      new Sticker(
         "../../assets/images/image_1.png",
         "O homem observou que um conjunto com três animais e um conjunto com três árvores possuem uma propriedade comum: a quantidade.Essa era a ideia de número.Dos números naturais.",
         0,
@@ -73,11 +87,18 @@ export class AllStickers {
         TypeOfSticker.TWO_IN_PAGE
       ),
       new Sticker(
-        "../../assets/images/image_5.png",
+        "../../assets/images/image_5_960x604.png",
         "Criaram também o calendário de 365 dias. Construíram grandes monumentos e grandes cidades.",
         4,
         SideOfSticker.LEFT,
         TypeOfSticker.TWO_IN_PAGE
+      ),
+      new Sticker(
+        "../../assets/images/imagem_fundo_250x353.png",
+        "",
+        0,
+        SideOfSticker.LEFT,
+        TypeOfSticker.ONLY_ONE_IN_PAGE
       ),
     ];
   }

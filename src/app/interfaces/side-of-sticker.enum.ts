@@ -3,19 +3,19 @@
  */
 export enum SideOfSticker {
   /**
-   * À esquerda da imagem
+   * À esquerda da imagem 0
    */
-  LEFT,
+  LEFT = 0,
   /**
-   *À direita da imagem
+   *À direita da imagem 1 
    */
-  RIGHT,
+  RIGHT = 1,
   /**
-   * Acima da imagem
+   * Acima da imagem 2 
    */
-  ABOVE,
+  ABOVE = 2,
   /**
-   * Abaixo da imagem
+   * Abaixo da imagem 3
    */
-  BELLOW,
+  BELLOW = 3
 }

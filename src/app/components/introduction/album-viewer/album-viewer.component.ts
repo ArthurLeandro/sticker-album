@@ -15,6 +15,8 @@ export class AlbumViewerComponent implements OnInit {
   cartBasic: string = "basic";
 
   @Input() title: string = "DEFAULT";
+  @Input() urlImage: string = "DEFAULT";
+
 
   constructor() {}
 

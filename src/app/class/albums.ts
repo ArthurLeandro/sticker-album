@@ -31,7 +31,7 @@ export class AllAlbums {
     this.allAlbums = [
       new Album("../../assets/images/new_capa-min.png", "Contos e Contas", 0),
       new Album("../../assets/images/new_contra-min.png", "Contas e Contos", 0),
-      new Album("../../assets/images/Indice.png", "Indice", 0),
+      new Album("../../assets/images/indice.png", "Indice", 0),
     ];
   }
 }

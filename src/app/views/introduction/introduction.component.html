@@ -1,29 +1,31 @@
 <div class="introduction">
   <div class="row">
     <div class="col-12 col-sm-12 col-md-8">
-      <app-album-slider ></app-album-slider>
-      <app-album-slider></app-album-slider>
-      <app-album-slider></app-album-slider>
+      <app-album-slider [contentToDisplay]="albumSliderOne"></app-album-slider>
+      <app-album-slider [contentToDisplay]="albumSliderTwo"></app-album-slider>
+      <app-album-slider
+        [contentToDisplay]="albumSliderThree"
+      ></app-album-slider>
     </div>
     <div class="col-12 col-sm-12 col-md-4">
       <div class="introduction-recomendation">
         <div class="card">
-          <h3 class="card-header">Albuns Recomendados</h3>
-          <div class="card-body">
-            <app-album-side-view></app-album-side-view>
-            <app-album-side-view></app-album-side-view>
-            <app-album-side-view></app-album-side-view>
+          <h3 class="card-header">
+            {{ albumSideViewOne.content.sectionName }}
+          </h3>
+          <div class="card-body" *ngFor="let sideView of albumSideViewOne.content.allAlbuns">
+            <app-album-side-view [title]="sideView.name" [urlImage]="sideView.urlImage"></app-album-side-view>
           </div>
         </div>
         <br />
         <br />
         <br />
         <div class="card">
-          <h3 class="card-header">Figurinhas Recomendados</h3>
-          <div class="card-body">
-            <app-album-side-view></app-album-side-view>
-            <app-album-side-view></app-album-side-view>
-            <app-album-side-view></app-album-side-view>
+          <h3 class="card-header">
+            {{ this.albumSideViewTwo.content.sectionName }}
+          </h3>
+          <div class="card-body" *ngFor="let sideView of albumSideViewTwo.content.allAlbuns">
+            <app-album-side-view [title]="sideView.name" [urlImage]="sideView.urlImage"></app-album-side-view>
           </div>
         </div>
       </div>

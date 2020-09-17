@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class AlbumSideViewComponent implements OnInit {
   @Input() title: string = "DEFAULT";
-  @Input() sideName: string = "";
+  @Input() urlImage:string="DEFAUL";
   constructor() {}
 
   ngOnInit(): void {}

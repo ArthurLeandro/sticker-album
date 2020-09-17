@@ -1,4 +1,5 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
+import { IntroPageContent } from "../../../class/albums";
 
 @Component({
   selector: "app-album-slider",
@@ -6,7 +7,7 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./album-slider.component.css"],
 })
 export class AlbumSliderComponent implements OnInit {
-  T1: String = "DEFAULT ";
+  @Input() contentToDisplay: IntroPageContent;
   constructor() {}
 
   ngOnInit(): void {}
