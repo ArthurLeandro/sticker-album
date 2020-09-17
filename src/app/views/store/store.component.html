@@ -28,7 +28,21 @@
   </div>
   <div class="col-7 items-list">
     <div class="row">
+      <!-- <p>{{ product.productName }}</p> -->
+      <div
+        class="col-12 col-sm-6 col-md-4"
+        *ngFor="let product of products; index as i"
+      >
+        <app-sell-card
+          [urlImage]="product.urlImage"
+          [productName]="product.productName"
+          [description]="product.description"
+          [price]="product.productPrice"
+        >
+        </app-sell-card>
+      </div>
       <!-- TODO make this in a ng for -->
+      <!-- <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
@@ -36,8 +50,7 @@
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
       <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
+      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div> -->
     </div>
   </div>
 </div>

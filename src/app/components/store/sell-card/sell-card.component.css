@@ -1,6 +1,7 @@
 .content-price {
   color: rgba(255, 0, 0, 0.75);
 }
+
 .content-product-name {
   color: #4e46ec;
 }
@@ -16,7 +17,7 @@
 }
 
 .sell-card-image {
-  background-color: tomato;
+  background-color: white;
   min-width: 100px;
   min-height: 150px;
 }

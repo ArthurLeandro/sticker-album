@@ -1,0 +1,14 @@
+.buyer-dialog-buttons {
+  float: right;
+}
+
+button {
+  margin: .4em;
+}
+
+.image {
+  padding: .3em;
+  background-color: white;
+  max-width: 300px;
+  max-height: 450px;
+}

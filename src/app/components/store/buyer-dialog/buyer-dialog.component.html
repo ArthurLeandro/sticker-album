@@ -1,2 +1,32 @@
-<p>TODO this buyer component</p>
-<button (click)="OnClose()">Close this</button>
+<!-- TODO Make this component Responsive to the screen and the amount of content inside of it -->
+<div class="row">
+  <div class="col-12">
+    <h1>{{ productName }}</h1>
+    <mat-divider></mat-divider>
+  </div>
+  <div class="col-12">
+    <div class="row">
+      <div class="col-md-6 col-12">
+        <img class="image" [src]="urlImage" alt="" />
+      </div>
+      <div class="col-md-6 col-12">
+        <p class="buyer-dialog-paragraph">{{ description }}</p>
+        <p class="buyer-dialog-paragraph-price">
+          {{ productPrice | currency: "R$" }}
+        </p>
+      </div>
+    </div>
+    <mat-divider></mat-divider>
+  </div>
+  <div class="col-12 justify-content-end">
+    <div class="buyer-dialog-buttons">
+      <button (click)="OnAddCart()" mat-raised-button>
+        <span class="material-icons"> add_shopping_cart </span>Adicionar
+      </button>
+      <button mat-raised-button color="warn" (click)="OnClose()">Fechar</button>
+      <button (click)="OnBuy()" mat-raised-button color="primary">
+        Comprar
+      </button>
+    </div>
+  </div>
+</div>
