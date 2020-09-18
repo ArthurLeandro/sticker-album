@@ -17,11 +17,12 @@ export class IntroductionComponent implements OnInit {
   constructor() {
     this.albumSliderOne = new IntroPageContent("Mais recentes");
     this.albumSliderTwo = new IntroPageContent("Meus Favoritos");
+    this.albumSliderTwo.content.allAlbuns = this.albumSliderTwo.albums.InitOne();
     this.albumSliderThree = new IntroPageContent("Meus álbuns");
-
+    this.albumSliderThree.content.allAlbuns = this.albumSliderThree.albums.InitTwo();
     this.albumSideViewOne = new IntroPageContent("Álbuns Recomendados");
     this.albumSideViewTwo = new IntroPageContent("Figurinhas Recomendadas");
-    
+    this.albumSideViewTwo.content.allAlbuns = this.albumSideViewTwo.albums.InitTwo();
   }
 
   ngOnInit(): void {}

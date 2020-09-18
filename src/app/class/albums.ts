@@ -30,9 +30,25 @@ export class AllAlbums {
   public Init(): void {
     this.allAlbums = [
       new Album("../../assets/images/new_capa-min.png", "Contos e Contas", 0),
-      new Album("../../assets/images/new_contra-min.png", "Contas e Contos", 0),
-      new Album("../../assets/images/indice.png", "Indice", 0),
+      new Album("../../assets/images/new_contra-min.png", "Contas e Contos", 1),
+      new Album("../../assets/images/image_14.png", "Indice", 2),
     ];
+  }
+  public InitOne(): Album[] {
+    let valueToReturn = [
+      new Album("../../assets/images/image_11.png", "Contos e Contas", 0),
+      new Album("../../assets/images/image_7.png", "Contas e Contos", 1),
+      new Album("../../assets/images/image_17.png", "Indice", 2),
+    ];
+    return valueToReturn;
+  }
+  public InitTwo(): Album[] {
+    let valueToReturn = [
+      new Album("../../assets/images/image_10.png", "Contos e Contas", 0),
+      new Album("../../assets/images/image_9.png", "Contas e Contos", 1),
+      new Album("../../assets/images/image_8.png", "Indice", 2),
+    ];
+    return valueToReturn;
   }
 }
 export class PageContent implements IntroPage {
