@@ -1,22 +1,12 @@
-<owl-carousel-o class="page-background" id="custom1" [options]="customOptions">
-  <ng-template carouselSlide *ngFor="let stick of allStickers">
-    <div class="row slide">
-      <app-sticker
-        [type]="stick.type"
-        [urlImage]="stick.urlImage"
-        [stickerContent]="stick.description"
-      ></app-sticker>
-    </div>
-  </ng-template>
-</owl-carousel-o>
-
-<script>
-  $(".custom1").owlCarousel({
-    animateOut: "slideOutDown",
-    animateIn: "flipInX",
-    items: 1,
-    margin: 30,
-    stagePadding: 30,
-    smartSpeed: 450,
-  });
-</script>
+<div id="book" class="album-viewer" *ngFor="let stick of allStickers">
+  <div class="my-page">
+    <app-sticker
+      [type]="stick.side"
+      [urlImage]="stick.urlImage"
+      [stickerContent]="stick.description"
+      [hardnessType]="stick.isCover"
+    >
+      <!-- TODO BINDAR OS DADOS [data-density]="stick-density"  -->
+    </app-sticker>
+  </div>
+</div>

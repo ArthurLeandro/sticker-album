@@ -57,6 +57,7 @@ import { LandingPageComponent } from "./views/landing-page/landing-page.componen
 import { AlbumView } from "./views/album-view/album-view.component";
 import { SellCardComponent } from "./components/store/sell-card/sell-card.component";
 import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dialog.component";
+import { TestComponent } from './views/test/test.component';
 
 @NgModule({
   imports: [
@@ -119,6 +120,7 @@ import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dial
     AlbumView,
     SellCardComponent,
     BuyerDialogComponent,
+    TestComponent,
   ],
   bootstrap: [AppComponent],
 })

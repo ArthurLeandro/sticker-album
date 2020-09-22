@@ -10,4 +10,8 @@ export enum TypeOfSticker {
    * Duas figurinhas por página
    */
   TWO_IN_PAGE,
+  /**
+   * Frente ou página de fundo
+   */
+  BACK_OR_FRONT_COVER,
 }

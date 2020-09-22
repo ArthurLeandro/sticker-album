@@ -1,0 +1,21 @@
+.album-viewer {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  padding-top: 12px;
+}
+
+.my-page {
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+.background-cover {
+  text-align: center;
+  background-color: tomato;
+  color: black;
+}

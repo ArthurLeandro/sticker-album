@@ -1,8 +1,8 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { OwlOptions } from "ngx-owl-carousel-o";
 //import Sticker from '../../models/sticker.js';
-import { AllStickers, Sticker } from '../../../class/stickers';
-
+import { AllStickers, Sticker } from "../../../class/stickers";
+import { PageFlip } from "page-flip";
 /*https://stackblitz.com/edit/ngx-owl-carousel-o?file=src%2Fapp%2Fapp.component.ts*/
 
 @Component({
@@ -10,36 +10,21 @@ import { AllStickers, Sticker } from '../../../class/stickers';
   templateUrl: "./page.component.html",
   styleUrls: ["./page.component.css"],
 })
-export class PageComponent implements OnInit {
+export class PageComponent implements OnInit, AfterViewInit {
   allStickers: Sticker[];
-
+  pageFlip: any;
   constructor() {
     this.allStickers = new AllStickers().allStickers;
   }
+  ngAfterViewInit(): void {
+    this.pageFlip = new PageFlip(document.getElementById("book"), {
+      width: 300,
+      height: 450,
+      size: "fixed",
+      showCover: true,
+    });
+    this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+  }
 
   ngOnInit(): void {}
-
-  // tslint:disable-next-line: member-ordering
-  customOptions: OwlOptions = {
-    items: 1,
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: true,
-    navSpeed: 1500,
-    margin: 4,
-    navText: ["Anterior", "Próximo"],
-    animateOut: "fadeOut",
-    animateIn: "fadeIn",
-    responsive: {
-      0: {
-        items: 1,
-      },
-      400: {
-        items: 2,
-      },
-    },
-    nav: true,
-  };
 }

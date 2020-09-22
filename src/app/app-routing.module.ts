@@ -19,6 +19,7 @@ import { UnauthorizedComponent } from "./views/unauthorized/unauthorized.compone
 import { UnauthenticatedComponent } from "./views/unauthenticated/unauthenticated.component";
 import { StoreComponent } from "./views/store/store.component";
 import { AlbumView } from "./views/album-view/album-view.component";
+import { TestComponent } from "./views/test/test.component";
 
 const routes: Routes = [
   { path: "", component: LandingPageComponent },
@@ -37,6 +38,8 @@ const routes: Routes = [
   { path: "unauthorized", component: UnauthorizedComponent },
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "introduction" },
+  // { path: "**", component: NotFoundComponent },
+  { path: "test", component: TestComponent },
   { path: "**", component: NotFoundComponent },
 ];
 

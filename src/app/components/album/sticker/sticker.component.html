@@ -1,26 +1,38 @@
 <div>
-  <div *ngIf="controllerAsNumber == 0" class="row">
-    <p class="col-2">{{ stickerContent }}</p>
-    <img class="col-10 image" [src]="urlImage" alt="" />
+  <div *ngIf="controllerAsNumber == 0">
+    <p class="">{{ stickerContent }}</p>
+    <img
+      class="image"
+      [ngClass]="{ 'background-image': !hardnessType }"
+      [src]="urlImage"
+      alt=""
+    />
   </div>
-  <div *ngIf="controllerAsNumber == 3" class="row">
-    <div class="row">
-      <img class="col-12 image" [src]="urlImage" alt="" />
-    </div>
-    <div class="row">
-      <p class="col-12">{{ stickerContent }}</p>
-    </div>
+  <div *ngIf="controllerAsNumber == 3">
+    <img
+      class="image"
+      [ngClass]="{ 'background-image': !hardnessType }"
+      [src]="urlImage"
+      alt=""
+    />
+    <p class="">{{ stickerContent }}</p>
   </div>
-  <div *ngIf="controllerAsNumber == 2" class="row">
-    <div class="row">
-      <p class="col-12">{{ stickerContent }}</p>
-    </div>
-    <div class="row">
-      <img class="col-12 image" [src]="urlImage" alt="" />
-    </div>
+  <div *ngIf="controllerAsNumber == 2">
+    <p class="">{{ stickerContent }}</p>
+    <img
+      class="image"
+      [ngClass]="{ 'background-image': !hardnessType }"
+      [src]="urlImage"
+      alt=""
+    />
   </div>
-  <div *ngIf="controllerAsNumber == 1" class="row">
-    <img class="col-10 image" [src]="urlImage" alt="" />
-    <p class="col-2">{{ stickerContent }}</p>
+  <div *ngIf="controllerAsNumber == 1">
+    <img
+      class="image"
+      [ngClass]="{ 'background-image': !hardnessType }"
+      [src]="urlImage"
+      alt=""
+    />
+    <p class="">{{ stickerContent }}</p>
   </div>
 </div>
