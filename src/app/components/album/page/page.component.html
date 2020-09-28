@@ -1,12 +1,21 @@
-<div id="book" class="album-viewer" *ngFor="let stick of allStickers">
-  <div class="my-page">
-    <app-sticker
-      [type]="stick.side"
-      [urlImage]="stick.urlImage"
-      [stickerContent]="stick.description"
-      [hardnessType]="stick.isCover"
+<div class="row d-flex justify-content-center">
+  <div class="col-10 com-md-8 col-lg-8 col-sm-10">
+    <div
+      id="book"
+      class="album-viewer text-center"
+      *ngFor="let stick of allStickers"
     >
-      <!-- TODO BINDAR OS DADOS [data-density]="stick-density"  -->
-    </app-sticker>
+      <div class="my-page">
+        <app-sticker
+        
+          [type]="stick.side"
+          [urlImage]="stick.urlImage"
+          [stickerContent]="stick.description"
+          [hardnessType]="stick.isCover"
+        >
+          <!-- TODO BINDAR OS DADOS [data-density]="stick-density"  -->
+        </app-sticker>
+      </div>
+    </div>
   </div>
 </div>

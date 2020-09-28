@@ -17,7 +17,6 @@ export class StickerComponent implements OnInit, AfterViewInit {
   constructor() {}
   ngAfterViewInit(): void {
     this.controllerAsNumber = this.type as number;
-    console.log(this.hardnessType);
   }
 
   ngOnInit(): void {}

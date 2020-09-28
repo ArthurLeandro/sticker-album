@@ -18,10 +18,14 @@ export class PageComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit(): void {
     this.pageFlip = new PageFlip(document.getElementById("book"), {
-      width: 300,
-      height: 450,
-      size: "fixed",
+      width: 450,
+      height: 600,
+      size: "stretch",
       showCover: true,
+      minWidth: 450,
+      maxWidth: 450,
+      minHeight: 600,
+      maxHeight: 600,
     });
     this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
   }
