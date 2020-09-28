@@ -1,25 +1,9 @@
-<div>
-  <div class="image" *ngIf="controllerAsNumber == 0">
-    <p *ngIf="hardnessType == false" class="">{{ stickerContent }}</p>
-    <img
-      class="image"
-      [ngClass]="{ 'background-image': hardnessType }"
-      [src]="urlImage"
-      alt=""
-    />
-  </div>
-  <div class="image" *ngIf="controllerAsNumber == 3">
-    <img
-      class="image"
-      [ngClass]="{ 'background-image': hardnessType }"
-      [src]="urlImage"
-      alt=""
-    />
-    <p *ngIf="hardnessType == false" class="">{{ stickerContent }}</p>
-  </div>
-  <div class="image" *ngIf="controllerAsNumber == 2">
-    <div *ngIf="controllerAsNumber == 2">
-      <p *ngIf="hardnessType == false" class="">{{ stickerContent }}</p>
+<div class="row sticker">
+  <div class="col-12 col-md-12 col-lg-12">
+    <div class="image" *ngIf="controllerAsNumber == 0">
+      <p *ngIf="hardnessType == false" class="col-12 col-md-12 col-lg-12">
+        {{ stickerContent }}
+      </p>
       <img
         class="image"
         [ngClass]="{ 'background-image': hardnessType }"
@@ -27,13 +11,39 @@
         alt=""
       />
     </div>
-    <div class="image" *ngIf="controllerAsNumber == 1">
+    <div class="image" *ngIf="controllerAsNumber == 3">
       <img
+        class="image"
         [ngClass]="{ 'background-image': hardnessType }"
         [src]="urlImage"
         alt=""
       />
-      <p *ngIf="hardnessType == false" class="">{{ stickerContent }}</p>
+      <p *ngIf="hardnessType == false" class="col-12 col-md-12 col-lg-12">
+        {{ stickerContent }}
+      </p>
+    </div>
+    <div class="image" *ngIf="controllerAsNumber == 2">
+      <div *ngIf="controllerAsNumber == 2">
+        <p *ngIf="hardnessType == false" class="col-12 col-md-12 col-lg-12">
+          {{ stickerContent }}
+        </p>
+        <img
+          class="image"
+          [ngClass]="{ 'background-image': hardnessType }"
+          [src]="urlImage"
+          alt=""
+        />
+      </div>
+      <div class="image" *ngIf="controllerAsNumber == 1">
+        <img
+          [ngClass]="{ 'background-image': hardnessType }"
+          [src]="urlImage"
+          alt=""
+        />
+        <p *ngIf="hardnessType == false" class="col-12 col-md-12 col-lg-12">
+          {{ stickerContent }}
+        </p>
+      </div>
     </div>
   </div>
 </div>

@@ -99,7 +99,7 @@ export class AllStickers {
         "../../assets/images/image_4.png",
         "Com o aumento da população, surgiu a necessidade de plantar e colher para sustentação de comunidades que o homem criou para facilitar sua sobrevivência.O homem já dominava o fogo e a linguagem",
         5,
-        SideOfSticker.RIGHT,
+        SideOfSticker.LEFT,
         TypeOfSticker.TWO_IN_PAGE,
         false
       ),

@@ -22,11 +22,8 @@ export class PageComponent implements OnInit, AfterViewInit {
       height: 600,
       size: "stretch",
       showCover: true,
-      minWidth: 450,
-      maxWidth: 450,
-      minHeight: 600,
-      maxHeight: 600,
     });
+
     this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
   }
 

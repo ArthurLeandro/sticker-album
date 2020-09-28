@@ -26,9 +26,12 @@
   max-width: 12.5%;
 } */
 p {
-  font-size: 12px;
+  font-size: 15px;
   margin: 1.2em;
-  background-color: rgba(0, 0, 0, 0.12);
+  line-height: 1.6em;
+  width: 100%;
+  min-width: 400px;
+  background-color: rgba(0, 0, 0, 0.012);
 }
 
 .image {
@@ -38,16 +41,18 @@ p {
   /* max-width: 50%; 
   height: auto;
   max-height: 600px;*/
-  max-width: 200px;
-  max-height: 300px;
+  max-width: 300px;
+  max-height: 400px;
   flex-shrink: 0;
+  padding: 0.0em;
   background-size: cover;
 }
 
 .background-image {
   padding: 0;
-  min-width: 300px;
-  min-height: 450px;
+  margin: 0;
+  min-width: 450px;
+  min-height: 600px;
   max-width: 100%;
   max-height: 100%;
   background-image: none;

@@ -2,6 +2,7 @@ import { NgModule } from "@angular/core";
 import { Routes, RouterModule } from "@angular/router";
 
 import { AuthGuard } from "./guards/auth.guard";
+
 import { LandingPageComponent } from "./views/landing-page/landing-page.component";
 import { AppComponent } from "./app.component";
 import { AboutComponent } from "./views/about/about.component";
@@ -22,25 +23,25 @@ import { AlbumView } from "./views/album-view/album-view.component";
 import { TestComponent } from "./views/test/test.component";
 
 const routes: Routes = [
-  { path: "", component: LandingPageComponent },
+  { path: "", redirectTo: "/album-view", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent },
-  { path: "admin", component: AdminComponent },
-  { path: "contact", component: ContactComponent },
-  { path: "developer", component: DeveloperComponent },
-  { path: "introduction", component: IntroductionComponent },
-  { path: "payment", component: PaymentComponent },
-  { path: "store", component: StoreComponent },
-  { path: "reports", component: ReportsComponent },
   { path: "album-view", component: AlbumView },
+  { path: "store", component: StoreComponent },
+  { path: "payment", component: PaymentComponent },
   { path: "error", component: ErrorComponent },
   { path: "unauthorized", component: UnauthorizedComponent },
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "introduction" },
+  { path: "**", component: NotFoundComponent },
+  { path: "admin", component: AdminComponent },
+  { path: "contact", component: ContactComponent },
+  { path: "developer", component: DeveloperComponent },
+  { path: "introduction", component: IntroductionComponent },
+  { path: "reports", component: ReportsComponent },
   // { path: "**", component: NotFoundComponent },
   { path: "test", component: TestComponent },
-  { path: "**", component: NotFoundComponent },
 ];
 
 @NgModule({
