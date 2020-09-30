@@ -61,3 +61,17 @@ img {
 .my-page:nth-child(odd) {
   background-image: url("../../../../assets/images/imagem_fundo_invertida_250x353.png");
 }
+
+
+@media only screen and (min-width: 175px) and (max-width: 575px) {
+  #book {
+    padding: 0.3em;
+  }
+
+  img {
+    width: 369px;
+    height: 490px;
+  }
+}
+
+/*col*/

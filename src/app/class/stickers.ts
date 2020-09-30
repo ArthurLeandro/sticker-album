@@ -73,7 +73,7 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_1.png",
-        "O homem observou que um conjunto com três animais e um conjunto com três árvores possuem uma propriedade comum: a quantidade.Essa era a ideia de número.Dos números naturais.",
+        "Na era Paleolítica, o homem produzia seus instrumentos, caçava e colhia para seu próprio sustento.O homem usava a pedra para marcar ossos, fazia nós em cordas ou usava os próprios dedos para determinar quantidades.",
         2,
         SideOfSticker.ABOVE,
         TypeOfSticker.TWO_IN_PAGE,
@@ -81,7 +81,7 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_2.png",
-        "Na era Paleolítica, o homem produzia seus instrumentos, caçava e colhia para seu próprio sustento.O homem usava a pedra para marcar ossos, fazia nós em cordas ou usava os próprios dedos para determinar quantidades.",
+        "O homem observou que um conjunto com três animais e um conjunto com três árvores possuem uma propriedade comum: a quantidade.Essa era a ideia de número.Dos números naturais.",
         3,
         SideOfSticker.BELLOW,
         TypeOfSticker.TWO_IN_PAGE,
@@ -89,7 +89,7 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_3.png",
-        "Das antigas civilizações, podemos citar os egípcios que viveram na margem do Rio Nilo há 5 000 anos",
+        "Com o aumento da população, surgiu a necessidade de plantar e colher para sustentação de comunidades que o homem criou para facilitar sua sobrevivência.O homem já dominava o fogo e a linguagem",
         4,
         SideOfSticker.ABOVE,
         TypeOfSticker.ONLY_ONE_IN_PAGE,
@@ -97,7 +97,7 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_4.png",
-        "Com o aumento da população, surgiu a necessidade de plantar e colher para sustentação de comunidades que o homem criou para facilitar sua sobrevivência.O homem já dominava o fogo e a linguagem",
+        "Das antigas civilizações, podemos citar os egípcios que viveram na margem do Rio Nilo há 5 000 anos",
         5,
         SideOfSticker.LEFT,
         TypeOfSticker.TWO_IN_PAGE,
@@ -115,7 +115,7 @@ export class AllStickers {
         "../../assets/images/image_6.png",
         "Os egípcios inventaram o relógio de sol e a balança.",
         7,
-        SideOfSticker.ABOVE,
+        SideOfSticker.BELLOW,
         TypeOfSticker.TWO_IN_PAGE,
         false
       ),
@@ -137,7 +137,7 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_9.png",
-        "Os egípcios inventaEsse papiro contém as soluções de problemas práticos envolvendo geometria e trigonometria que os egípcios costumavam resolver.Hoje ele se encontra no British Museum, em Londres, e é conhecido como Papiro de Rhind.Quase tudo que sabemos sobre a matemática dos egípcios ficou registrado no Papiro Ahmes.ram o relógio de sol e a balança.",
+        "Esse papiro contém as soluções de problemas práticos envolvendo geometria e trigonometria que os egípcios costumavam resolver.Hoje ele se encontra no British Museum, em Londres, e é conhecido como Papiro de Rhind.Quase tudo que sabemos sobre a matemática dos egípcios ficou registrado no Papiro Ahmes.ram o relógio de sol e a balança.",
         10,
         SideOfSticker.ABOVE,
         TypeOfSticker.TWO_IN_PAGE,
@@ -153,14 +153,14 @@ export class AllStickers {
       ),
       new Sticker(
         "../../assets/images/image_11.png",
-        "Eratóstenes de Cirene ficou muito conhecido, pois foi o matemático que conseguiu medir o raio da Terra.Eratóstenes criou um dispositivo onde era possível achar todos os números primos menores que um número n qualquer.",
+        "Euclides de Alexandria escreveu de maneira organizada todos os conhecimentos de geometria que existiam até sua época.Sua obra foi intitulada 'Os elementos'.Nela está contida a Geometria Euclideana que até hoje é estudada nas escolas.",
         12,
         SideOfSticker.ABOVE,
         TypeOfSticker.TWO_IN_PAGE,
         false
       ),
       new Sticker(
-        "../../assets/images/image_11.png",
+        "../../assets/images/image_12.png",
         "Eratóstenes de Cirene ficou muito conhecido, pois foi o matemático que conseguiu medir o raio da Terra.Eratóstenes criou um dispositivo onde era possível achar todos os números primos menores que um número n qualquer.",
         12,
         SideOfSticker.ABOVE,
