@@ -3,7 +3,7 @@
     <div
       id="book"
       class="album-viewer text-center"
-      *ngFor="let stick of allStickers"
+      *ngFor="let stick of allStickers; let indexOfElement = index"
     >
       <div class="my-page">
         <app-sticker
@@ -11,8 +11,8 @@
           [urlImage]="stick.urlImage"
           [stickerContent]="stick.description"
           [hardnessType]="stick.isCover"
+          [typeOf]="stick.type"
         >
-          <!-- TODO BINDAR OS DADOS [data-density]="stick-density"  -->
         </app-sticker>
       </div>
     </div>

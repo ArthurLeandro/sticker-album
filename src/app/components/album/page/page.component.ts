@@ -3,6 +3,7 @@ import { OwlOptions } from "ngx-owl-carousel-o";
 //import Sticker from '../../models/sticker.js';
 import { AllStickers, Sticker } from "../../../class/stickers";
 import { PageFlip } from "page-flip";
+import { TypeOfSticker } from "../../../interfaces/type-of-sticker.enum";
 /*https://stackblitz.com/edit/ngx-owl-carousel-o?file=src%2Fapp%2Fapp.component.ts*/
 
 @Component({
@@ -30,6 +31,13 @@ export class PageComponent implements OnInit, AfterViewInit {
 
     this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
   }
-
   ngOnInit(): void {}
+  public IsDualSticker(type: TypeOfSticker): boolean {
+    let valueToReturn: boolean = false;
+    if (type == TypeOfSticker.TWO_IN_PAGE) {
+      valueToReturn = true;
+    }
+    console.log("VALOR DE TYPE é : " + valueToReturn);
+    return valueToReturn;
+  }
 }
