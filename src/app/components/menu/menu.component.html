@@ -1,20 +1,27 @@
 <mat-toolbar style="background-color: cadetblue">
-  <button mat-icon-button [matMenuTriggerFor]='menu'>
+  <button mat-icon-button [matMenuTriggerFor]="menu">
     <span class="material-icons">more_vert</span>
   </button>
-  <mat-menu #menu='matMenu'>
-    <button mat-menu-item routerLink="/introduction" routerLinkActive="selected">
+  <mat-menu #menu="matMenu">
+    <button
+      mat-menu-item
+      routerLink="/introduction"
+      routerLinkActive="selected"
+    >
       <span class="material-icons">home</span>
       <span>Home</span>
     </button>
+    <!-- 
     <button mat-menu-item routerLink="/signup" routerLinkActive="selected">
       <span class="material-icons">photo_library</span>
       <span>Albuns</span>
-    </button>
+    </button> 
+  -->
     <button mat-menu-item routerLink="/store" routerLinkActive="selected">
-      <span class="material-icons">add-_shopping_cart</span>
+      <span class="material-icons">add_shopping_cart</span>
       <span>Comprar</span>
     </button>
+    <!--
     <button mat-menu-item routerLink="/contact" routerLinkActive="selected">
       <span class="material-icons">contact_page</span>
       <span>Fale conosco</span>
@@ -27,15 +34,26 @@
       <span class="material-icons">computer</span>
       <span>Desenvolvedor</span>
     </button>
+  -->
   </mat-menu>
 
   <span class="toolbar-spacer"></span>
 
-  <div style="float:right">
-    <button mat-icon-button routerLink="/login" routerLinkActive="selected" title="Perfil">
+  <div style="float: right">
+    <button
+      mat-icon-button
+      routerLink="/login"
+      routerLinkActive="selected"
+      title="Perfil"
+    >
       <span class="material-icons">account_circle</span>
     </button>
-    <button mat-icon-button routerLink="/logout" routerLinkActive="selected" title="Sair">
+    <button
+      mat-icon-button
+      routerLink="/logout"
+      routerLinkActive="selected"
+      title="Sair"
+    >
       <span class="material-icons">exit_to_app</span>
     </button>
   </div>

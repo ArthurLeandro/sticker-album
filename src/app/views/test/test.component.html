@@ -9,6 +9,19 @@
         <div class="my-page">Page two</div>
         <div class="my-page">Page three</div>
         <div class="my-page">Page four</div>
+        <div class="my-page">
+          <app-two-stickers
+            [type]="stick.side"
+            [urlImage]="stick.urlImage"
+            [stickerContent]="stick.description"
+            [hardnessType]="stick.isCover"
+            [typeOf]="stick.type"
+          >
+          </app-two-stickers>
+        </div>
+        <div class="my-page">Page six</div>
+        <div class="my-page">Page seven</div>
+        <div class="my-page">Page eight</div>
         <div class="my-page background-cover" data-density="hard">
           Last page
         </div>

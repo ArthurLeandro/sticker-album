@@ -58,6 +58,7 @@ import { AlbumView } from "./views/album-view/album-view.component";
 import { SellCardComponent } from "./components/store/sell-card/sell-card.component";
 import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dialog.component";
 import { TestComponent } from './views/test/test.component';
+import { TwoStickersComponent } from './components/album/two-stickers/two-stickers.component';
 
 @NgModule({
   imports: [
@@ -121,6 +122,7 @@ import { TestComponent } from './views/test/test.component';
     SellCardComponent,
     BuyerDialogComponent,
     TestComponent,
+    TwoStickersComponent,
   ],
   bootstrap: [AppComponent],
 })

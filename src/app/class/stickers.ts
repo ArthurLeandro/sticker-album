@@ -1,29 +1,35 @@
 import { ISticker } from "../interfaces/sticker";
 import { SideOfSticker } from "../interfaces/side-of-sticker.enum";
 import { TypeOfSticker } from "../interfaces/type-of-sticker.enum";
+
 export class Sticker implements ISticker {
   /**
    * string - indica onde a figurinha está localizada
    */
   urlImage: string;
+
   /**
    * string - o que deve aparecer na figurinha
    */
   description: string;
+
   /**
    * number - número do id
    */
   id: number;
+
   /**
    * enum - qual lado o text irá aparecer
    */
   side: SideOfSticker;
+
   /**
    * enum - como o sticker ficará na tela
    */
   type: TypeOfSticker;
 
   isCover: boolean;
+
   constructor(
     imag: string,
     desc: string,
@@ -40,11 +46,15 @@ export class Sticker implements ISticker {
     this.isCover = cover;
   }
 }
+
 export class AllStickers {
+
   allStickers: Sticker[];
+
   constructor() {
     this.Init();
   }
+
   public Init(): void {
     this.allStickers = [
       new Sticker(

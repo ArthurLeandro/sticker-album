@@ -24,6 +24,7 @@ import { TestComponent } from "./views/test/test.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/album-view", pathMatch: "full" },
+  { path: "introduction", redirectTo: "/album-view", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent },
@@ -34,6 +35,7 @@ const routes: Routes = [
   { path: "unauthorized", component: UnauthorizedComponent },
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "introduction" },
+  { path: "test", component: TestComponent },
   { path: "**", component: NotFoundComponent },
   { path: "admin", component: AdminComponent },
   { path: "contact", component: ContactComponent },
@@ -41,7 +43,6 @@ const routes: Routes = [
   { path: "introduction", component: IntroductionComponent },
   { path: "reports", component: ReportsComponent },
   // { path: "**", component: NotFoundComponent },
-  { path: "test", component: TestComponent },
 ];
 
 @NgModule({

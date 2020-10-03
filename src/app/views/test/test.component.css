@@ -10,8 +10,13 @@
 
 .my-page {
   text-align: center;
-  background-color: black;
-  color: white;
+  background-color: violet;
+  color: black;
+}
+
+
+.my-page:nth-child(odd) {
+  background-color: rgb(9, 255, 0);
 }
 
 .background-cover {
