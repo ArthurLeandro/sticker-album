@@ -9,11 +9,9 @@
 }
 
 .my-page {
-  text-align: center;
   background-color: violet;
   color: black;
 }
-
 
 .my-page:nth-child(odd) {
   background-color: rgb(9, 255, 0);
@@ -23,4 +21,89 @@
   text-align: center;
   background-color: tomato;
   color: black;
+}
+
+div.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  border: 3px solid #73ad21;
+  padding: 2em;
+}
+
+.absolute {
+  position: absolute;
+  background-color: #fff;
+  width: 200px;
+  height: 200px;
+}
+.text {
+  position: relative;
+  font-size: 0.9em;
+  font-family: Roboto;
+  top: 0px;
+  left: 0px;
+  width: 45%;
+  height: 50%;
+  padding: 1em;
+}
+
+.image {
+  position: relative;
+  left: 50%;
+  top: -50%;
+  width: 50%;
+  height: 50%;
+}
+
+.image-right {
+  left: 0px;
+  top: -98%;
+}
+
+.text-right {
+  left: 55%;
+  top: -48%;
+}
+
+.number-content {
+  background-color: yellow;
+  text-align: center;
+  font-size: 31px;
+  height: 30px;
+  padding: 0.1em 0 0 0;
+}
+
+.number {
+  position: relative;
+  left: 47%;
+  top: 45%;
+  width: 8%;
+  height: 40px;
+}
+
+.image-center {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  max-height: 300px;
+}
+
+.text-center {
+  left: 0%;
+  top: 0%;
+  height: 160px;
+  width: 100%;
+}
+
+.test {
+  margin-left: 2em;
+}
+.text-center-right {
+  height: 100%;
+}
+.image-center-left {
+  height: 100%;
+  top: -100%;
 }

@@ -28,11 +28,16 @@ export class TestComponent implements OnInit {
 
   ngOnInit(): void {
     this.pageFlip = new PageFlip(document.getElementById("book"), {
-      width: 300,
-      height: 450,
-      size: "fixed",
+      width: 550,
+      height: 730,
+      size: "stretch",
+      minWidth: 365,
+      maxWidth: 800,
+      minHeight: 620,
+      maxHeight: 1350,
       showCover: true,
     });
+
     this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
   }
 }
