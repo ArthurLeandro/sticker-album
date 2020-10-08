@@ -60,6 +60,7 @@ import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dial
 import { TestComponent } from './views/test/test.component';
 import { TwoStickersComponent } from './components/album/two-stickers/two-stickers.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { AlbumService } from './services/album-service.service';
 
 @NgModule({
   imports: [
@@ -90,6 +91,7 @@ import { FooterComponent } from './components/footer/footer.component';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     fakeBackendProvider,
+    AlbumService
   ],
   entryComponents: [BuyerDialogComponent],
   declarations: [
