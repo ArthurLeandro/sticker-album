@@ -1,18 +1,19 @@
-<div class="row d-flex justify-content-center">
+<p>{{ pageTitle | async }}</p>
+<!-- <div class="row d-flex justify-content-center">
   <div class="col-11 com-md-11 col-lg-11 col-sm-11">
     <div
       id="book"
       class="album-viewer text-center"
-      *ngFor="let stick of allStickers; let indexOfElement = index"
+      <!-- *ngFor="let stick of allStickers; let indexOfElement = index" 
     >
       <div class="my-page">
-        <!-- <ng-template
+        <<ng-template
           [ngIf]="ShouldCreateAnPage(stick.description)"
           [ngIfElse]="twoSticker"
           class="absolute"
         > -->
-        <!-- <p>One Page{{ indexOfElement }}</p> -->
-        <app-sticker
+<!-- <p>One Page{{ indexOfElement }}</p> -->
+<!-- <app-sticker
           id="Two {{ indexOfElement }}"
           [type]="getNormalSticker(indexOfElement).side"
           [urlImage]="getNormalSticker(indexOfElement).urlImage"
@@ -20,8 +21,8 @@
           [hardnessType]="getNormalSticker(indexOfElement).isCover"
           [typeOf]="getNormalSticker(indexOfElement).type"
         >
-        </app-sticker>
-        <!-- </ng-template>
+        </app-sticker> -->
+<!-- </ng-template>
 
         <ng-template class="absolute" #twoSticker>
            <p id="Two {{ indexOfElement }}">twoSticker{{ indexOfElement }}</p>
@@ -44,7 +45,7 @@
           >
           </app-sticker>
         </ng-template> -->
-      </div>
+<!--      </div>
     </div>
   </div>
-</div>
+</div> -->

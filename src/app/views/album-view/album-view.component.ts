@@ -1,52 +1,37 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { AlbumService } from "../../services/album-service.service";
+import { PageFlip } from "page-flip";
 
 @Component({
   selector: "app-album-view",
   templateUrl: "./album-view.component.html",
   styleUrls: ["./album-view.component.css"],
 })
-export class AlbumView implements OnInit {
+export class AlbumView implements OnInit, AfterViewInit {
   private albumTitle: string;
+  private albumPages: any;
   private albumAsJSON: any;
+  private pageFlip: any;
 
   constructor(private albumService: AlbumService) {}
 
   ngOnInit(): void {
     this.albumAsJSON = this.albumService.GetJsonFile("");
-    let name: string = this.albumAsJSON.name;
     this.albumTitle = name;
+    this.albumPages = this.albumAsJSON.pages;
   }
 
-  /**
-   * Getter $albumTitle
-   * @return {string}
-   */
-  public get $albumTitle(): string {
-    return this.albumTitle;
-  }
-
-  /**
-   * Setter $albumTitle
-   * @param {string} value
-   */
-  public set $albumTitle(value: string) {
-    this.albumTitle = value;
-  }
-
-  /**
-   * Getter $albumAsJSON
-   * @return {any}
-   */
-  public get $albumAsJSON(): any {
-    return this.albumAsJSON;
-  }
-
-  /**
-   * Setter $albumAsJSON
-   * @param {any} value
-   */
-  public set $albumAsJSON(value: any) {
-    this.albumAsJSON = value;
+  ngAfterViewInit(): void {
+    // this.pageFlip = new PageFlip(document.getElementById("book"), {
+    //   width: 550,
+    //   height: 730,
+    //   size: "stretch",
+    //   minWidth: 365,
+    //   maxWidth: 800,
+    //   minHeight: 620,
+    //   maxHeight: 1350,
+    //   showCover: true,
+    // });
+    // this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
   }
 }

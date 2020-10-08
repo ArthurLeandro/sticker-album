@@ -1,2 +1,10 @@
 <!-- <app-page></app-page> -->
-<p>Olhe seu console Arthur</p>
+<div class="row">
+  <div class="col-12 col-md-10 justify-content-center">
+    <div class="album-viewer" id="book">
+      <div class="my-page" *ngFor="let pages of albumPages">
+        <app-page [pageToView]="pages"></app-page>
+      </div>
+    </div>
+  </div>
+</div>
