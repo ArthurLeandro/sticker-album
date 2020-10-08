@@ -1,0 +1,206 @@
+{
+  "ID": "1",
+  "name": "Contos & Contas",
+  "pages": [{
+      "ID": "1",
+      "stickers": [{
+        "ID": "1",
+        "texto": {
+          "textContent": "",
+          "anchor": "centro"
+        },
+        "imagem": {
+          "urlImage": "../../assets/images/new_capa-min.png",
+          "ID": "1",
+          "orientation": "retrato",
+          "stickerNumber": ""
+        },
+        "typeOfSticker": "capa"
+      }]
+    },
+
+    {
+      "ID": "2",
+      "stickers": [{
+        "ID": "2",
+        "texto": {
+          "textContent": "Caro (a) aluno (a), é com muito prazer que eu apresento a versão virtual do álbum de figurinhas História da Matemática. Há mais de 20 anos lecionando Matemática para jovens e adultos, eu sempre percebi muita dificuldade por parte da maioria em interpretar problemas e desenvolver cálculos matemáticos. Por isso criei um material que possa motivar os estudantes a praticar os exercícios e estudar de forma mais aprofundada os prazeres da Matemática.",
+          "anchor": "centro"
+        },
+        "imagem": {
+          "urlImage": "../../assets/images/creditos_1-min.png",
+          "ID": "2",
+          "orientation": "retrato",
+          "stickerNumber": ""
+        },
+        "typeOfSticker": "capa"
+      }]
+    },
+
+    {
+      "ID": "3",
+      "stickers": [{
+          "ID": "3",
+          "texto": {
+            "textContent": "Na era Paleolítica, o homem produzia seus instrumentos, caçava e colhia para seu próprio sustento.O homem usava a pedra para marcar ossos, fazia nós em cordas ou usava os próprios dedos para determinar quantidades.",
+            "anchor": "esquerda"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_1.png",
+            "ID": "3",
+            "orientation": "retrato",
+            "stickerNumber": "1"
+          },
+          "typeOfSticker": "figurinha"
+        },
+        {
+          "ID": "4",
+          "texto": {
+            "textContent": "O homem observou que um conjunto com três animais e um conjunto com três árvores possuem uma propriedade comum: a quantidade.Essa era a ideia de número.Dos números naturais.",
+            "anchor": "direita"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_2.png",
+            "ID": "4",
+            "orientation": "retrato",
+            "stickerNumber": "2"
+          },
+          "typeOfSticker": "figurinha"
+        }
+      ]
+    },
+
+    {
+      "ID": "5",
+      "stickers": [{
+          "ID": "5",
+          "texto": {
+            "textContent": "Com o aumento da população, surgiu a necessidade de plantar e colher para sustentação de comunidades que o homem criou para facilitar sua sobrevivência.O homem já dominava o fogo e a linguagem.",
+            "anchor": "direita"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_3.png",
+            "ID": "5",
+            "orientation": "retrato",
+            "stickerNumber": "3"
+          },
+          "typeOfSticker": "figurinha"
+        },
+        {
+          "ID": "6",
+          "texto": {
+            "textContent": "Das antigas civilizações, podemos citar os egípcios que viveram na margem do Rio Nilo há 5 000 anos.",
+            "anchor": "esquerda"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_4.png",
+            "ID": "6",
+            "orientation": "retrato",
+            "stickerNumber": "4"
+          },
+          "typeOfSticker": "figurinha"
+        }
+      ]
+    },
+    {
+      "ID": "7",
+      "stickers": [{
+          "ID": "7",
+          "texto": {
+            "textContent": "Os egípcios inventaram o relógio de sol e a balança.",
+            "anchor": "esquerda"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_5.png",
+            "ID": "7",
+            "orientation": "paisagem",
+            "stickerNumber": "5"
+          },
+          "typeOfSticker": "figurinha"
+        },
+        {
+          "ID": "8",
+          "texto": {
+            "textContent": "Criaram também o calendário de 365 dias. Construíram grandes monumentos e grandes cidades.",
+            "anchor": "direita"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_2.png",
+            "ID": "8",
+            "orientation": "paisagem",
+            "stickerNumber": "6"
+          },
+          "typeOfSticker": "figurinha"
+        }
+      ]
+    },
+
+    {
+      "ID": "9",
+      "stickers": [{
+        "ID": "9",
+        "texto": {
+          "textContent": "Heródoto, o primeiro historiador da Grécia Antiga, afirmava que os egípcios frequentemente tinham que remarcar suas terras prejudicadas pelas inundações do Rio Nilo. Para isso, eram usadas algumas técnicas primitivas de matemática.",
+          "anchor": "centro"
+        },
+        "imagem": {
+          "urlImage": "../../assets/images/image_7.png",
+          "ID": "9",
+          "orientation": "paisagem",
+          "stickerNumber": "7"
+        },
+        "typeOfSticker": "figurinha"
+      }]
+    },
+
+    {
+      "ID": "10",
+      "stickers": [{
+          "ID": "10",
+          "texto": {
+            "textContent": "Os faraós ordenavam que as terras fossem divididas proporcionalmente à quantidade de membros da família em condições de trabalho.Os faraós acreditavam, há milênios, que se não houvesse terra ociosa, nem mão de obra ociosa, haveria fartura para todos.Os egípcios produziram um sistema de numeração interessante. O sistema não é posicional, ou seja, a ordem dos símbolos não interfere no valor do número.A matemática dos egípcios era prática. Solucionava problemas do dia a dia",
+            "anchor": "centro-direita"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_8.png",
+            "ID": "10",
+            "orientation": "retrato",
+            "stickerNumber": "8"
+          },
+          "typeOfSticker": "figurinha"
+        },
+        {
+          "ID": "11",
+          "texto": {
+            "textContent": "Esse papiro contém as soluções de problemas práticos envolvendo geometria e trigonometria que os egípcios costumavam resolver.Hoje ele se encontra no British Museum, em Londres, e é conhecido como Papiro de Rhind.Quase tudo que sabemos sobre a matemática dos egípcios ficou registrado no Papiro Ahmes.",
+            "anchor": "direita"
+          },
+          "imagem": {
+            "urlImage": "../../assets/images/image_9.png",
+            "ID": "11",
+            "orientation": "retrato",
+            "stickerNumber": "9"
+          },
+          "typeOfSticker": "figurinha"
+        }
+      ]
+    },
+    {
+      "ID": "12",
+      "stickers": [{
+        "ID": "12",
+        "texto": {
+          "textContent": "",
+          "anchor": "centro"
+        },
+        "imagem": {
+          "urlImage": "../../assets/images/new_contra-min.png",
+          "ID": "12",
+          "orientation": "retrato",
+          "stickerNumber": ""
+        },
+        "typeOfSticker": "capa"
+      }]
+    }
+  ]
+}
