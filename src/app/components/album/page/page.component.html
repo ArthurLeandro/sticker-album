@@ -6,14 +6,44 @@
       *ngFor="let stick of allStickers; let indexOfElement = index"
     >
       <div class="my-page">
+        <!-- <ng-template
+          [ngIf]="ShouldCreateAnPage(stick.description)"
+          [ngIfElse]="twoSticker"
+          class="absolute"
+        > -->
+        <!-- <p>One Page{{ indexOfElement }}</p> -->
         <app-sticker
-          [type]="stick.side"
-          [urlImage]="stick.urlImage"
-          [stickerContent]="stick.description"
-          [hardnessType]="stick.isCover"
-          [typeOf]="stick.type"
+          id="Two {{ indexOfElement }}"
+          [type]="getNormalSticker(indexOfElement).side"
+          [urlImage]="getNormalSticker(indexOfElement).urlImage"
+          [stickerContent]="getNormalSticker(indexOfElement).description"
+          [hardnessType]="getNormalSticker(indexOfElement).isCover"
+          [typeOf]="getNormalSticker(indexOfElement).type"
         >
         </app-sticker>
+        <!-- </ng-template>
+
+        <ng-template class="absolute" #twoSticker>
+           <p id="Two {{ indexOfElement }}">twoSticker{{ indexOfElement }}</p>
+          <p id="Two {{ indexOfElement }}">twoSticker{{ indexOfElement+1 }}</p> 
+
+          <app-sticker
+            [type]="getFirstSticker(indexOfElement).side"
+            [urlImage]="getFirstSticker(indexOfElement).urlImage"
+            [stickerContent]="getFirstSticker(indexOfElement).description"
+            [hardnessType]="getFirstSticker(indexOfElement).isCover"
+            [typeOf]="getFirstSticker(indexOfElement).type"
+          >
+          </app-sticker>
+          <app-sticker
+            [type]="getSecondSticker(indexOfElement).side"
+            [urlImage]="getSecondSticker(indexOfElement).urlImage"
+            [stickerContent]="getSecondSticker(indexOfElement).description"
+            [hardnessType]="getSecondSticker(indexOfElement).isCover"
+            [typeOf]="getSecondSticker(indexOfElement).type"
+          >
+          </app-sticker>
+        </ng-template> -->
       </div>
     </div>
   </div>

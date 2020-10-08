@@ -12,11 +12,26 @@ import { TypeOfSticker } from "../../../interfaces/type-of-sticker.enum";
   styleUrls: ["./page.component.css"],
 })
 export class PageComponent implements OnInit, AfterViewInit {
-  allStickers: Sticker[];
-  pageFlip: any;
+  private allStickers: Sticker[];
+  private record: number;
+  pageFlip: PageFlip;
+
   constructor() {
     this.allStickers = new AllStickers().allStickers;
+    this.record = 1;
   }
+  public getNextValue(i: number): number {
+    let value = i;
+    if (this.record == 0) this.record = i;
+    else value = this.record;
+    return value;
+  }
+  public getIndexForSecondSticker(): number {
+    let value: number = this.record + 1;
+    this.record += 2;
+    return value;
+  }
+
   ngAfterViewInit(): void {
     this.pageFlip = new PageFlip(document.getElementById("book"), {
       width: 550,
@@ -28,16 +43,36 @@ export class PageComponent implements OnInit, AfterViewInit {
       maxHeight: 1350,
       showCover: true,
     });
-
     this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+    let parent = document.getElementById("Two 3").parentElement;
+    let parentOfSecond = document.getElementById("Two 4").parentElement;
+    parentOfSecond.classList.remove("my-page");
+    parent.appendChild(document.getElementById("Two 4"));
+    // console.log(document.getElementById("Two 4"));
   }
+
   ngOnInit(): void {}
-  public IsDualSticker(type: TypeOfSticker): boolean {
-    let valueToReturn: boolean = false;
-    if (type == TypeOfSticker.TWO_IN_PAGE) {
-      valueToReturn = true;
-    }
-    console.log("VALOR DE TYPE é : " + valueToReturn);
-    return valueToReturn;
+
+  public ShouldCreateAnPage(description: string): boolean {
+    return description.length > 270 || description.length <= 0;
+  }
+
+  public getFirstSticker(i: number): Sticker {
+    let value = i + this.record < this.allStickers.length ? i + this.record : 1;
+    return this.allStickers[value];
+  }
+  public getNormalSticker(i: number): Sticker {
+    return this.allStickers[i];
+  }
+  public getSecondSticker(i: number): Sticker {
+    this.record = 1;
+    return this.getFirstSticker(i);
+  }
+  /**
+   * Setter $allStickers
+   * @param {Sticker[]} value
+   */
+  public set $allStickers(value: Sticker[]) {
+    this.allStickers = value;
   }
 }

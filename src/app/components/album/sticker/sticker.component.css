@@ -26,6 +26,80 @@
   max-width: 12.5%;
 } */
 
+
+
+.relative {
+  position: relative;
+  width: 400px;
+  height: 200px;
+  padding: 2em;
+}
+
+.absolute {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
+
+p {
+  position: relative;
+  font-size: 0.9em;
+  font-family: Roboto;
+  top: 0px;
+  left: 0px;
+  width: 45%;
+  height: 50%;
+  padding: 1em;
+}
+
+/* .image {
+  position: relative;
+  left: 50%;
+  top: -50%;
+  width: 50%;
+  height: 50%;
+} */
+
+
+.image-right {
+  left: 0px;
+  top: -98%;
+}
+
+.text-right {
+  left: 55%;
+  top: -48%;
+}
+
+
+.image-center {
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  margin: 1em 0 1em 0;
+  max-height: 300px;
+}
+
+.text-center {
+  left: 0%;
+  top: 0%;
+  height: 160px;
+  width: 100%;
+}
+
+.test {
+  margin-left: 2em;
+}
+
+.text-center-right {
+  height: 100%;
+}
+
+.image-center-left {
+  height: 100%;
+  top: -100%;
+}
+
 p {
   font-size: 15px;
   margin: 1.2em;
@@ -39,9 +113,9 @@ p {
   /* display: block;
   margin-left: auto;
   margin-right: auto;
-  /* max-width: 50%; 
+  /* max-width: 50%; */
   height: auto;
-  max-height: 600px;*/
+  max-height: 600px;
   max-width: 300px;
   max-height: 400px;
   flex-shrink: 0;
@@ -58,6 +132,7 @@ p {
   max-height: 100%;
   background-image: none;
 }
+
 
 @media only screen and (min-width: 175px) and (max-width: 575px) {
   p {
@@ -80,7 +155,9 @@ p {
     min-width: 100%;
     max-height: 100%;
   }
-} /*col*/
+}
+
+/*col*/
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   p {
@@ -91,11 +168,13 @@ p {
     min-width: 200px;
     background-color: rgba(0, 0, 0, 0.022);
   }
+
   .image {
     max-width: 400px;
     max-height: 500px;
     margin: 0.8em;
   }
+
   .background-image {
     padding: 0;
     margin: 0;
@@ -104,7 +183,9 @@ p {
     max-width: 100%;
     max-height: 100%;
   }
-} /*col-sm*/
+}
+
+/*col-sm*/
 
 @media only screen and (min-width: 768px) and (max-width: 961px) {
   p {
@@ -115,11 +196,13 @@ p {
     min-width: 200px;
     background-color: rgba(0, 0, 0, 0.022);
   }
+
   .image {
     max-width: 200px;
     max-height: 250px;
     margin: 0.8em;
   }
+
   .background-image {
     padding: 0;
     margin: 0;
@@ -128,22 +211,26 @@ p {
     max-width: 100%;
     max-height: 100%;
   }
-} /*col-md*/
+}
+
+/*col-md*/
 
 @media only screen and (min-width: 962px) and (max-width: 1409px) {
   p {
     margin: 0;
-    font-size: 17px;
+    font-size: 0.9em;
     margin-top: 2em;
     line-height: 2em;
     max-width: 550px;
     background-color: rgba(0, 0, 0, 0.022);
   }
+
   .image {
-    max-width: 400px;
-    max-height: 500px;
+    max-width: 200px;
+    max-height: 240px;
     margin: 1.2em;
   }
+
   .background-image {
     padding: 0;
     margin: 0;
@@ -152,4 +239,6 @@ p {
     max-width: 100%;
     max-height: 100%;
   }
-} /*col-lg*/
+}
+
+/*col-lg*/

@@ -28,14 +28,6 @@ export class StickerComponent implements OnInit, AfterViewInit {
   ngAfterViewInit(): void {
     //TODO has to be on the on change and only one image is showing
     this.controllerAsNumber = this.type as number;
-    console.log(
-      "IMG: " +
-        this.urlImage +
-        "\nsticker: " +
-        this.stickerContent +
-        "\nSied:" +
-        this.type
-    );
   }
 
   ngOnInit(): void {}
