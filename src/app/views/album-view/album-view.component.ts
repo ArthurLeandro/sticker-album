@@ -12,7 +12,7 @@ export class AlbumView implements OnInit, AfterViewInit {
   private albumPages: any;
   private albumAsJSON: any;
   private pageFlip: any;
-
+  
   constructor(private albumService: AlbumService) {}
 
   ngOnInit(): void {
@@ -22,16 +22,17 @@ export class AlbumView implements OnInit, AfterViewInit {
   }
 
   ngAfterViewInit(): void {
-    // this.pageFlip = new PageFlip(document.getElementById("book"), {
-    //   width: 550,
-    //   height: 730,
-    //   size: "stretch",
-    //   minWidth: 365,
-    //   maxWidth: 800,
-    //   minHeight: 620,
-    //   maxHeight: 1350,
-    //   showCover: true,
-    // });
-    // this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+    this.pageFlip = new PageFlip(document.getElementById("book"), {
+      width: 550,
+      height: 730,
+      size: "stretch",
+      minWidth: 365,
+      maxWidth: 800,
+      minHeight: 620,
+      maxHeight: 1350,
+      showCover: true,
+    });
+    this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+    
   }
 }

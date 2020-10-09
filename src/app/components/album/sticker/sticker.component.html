@@ -1,4 +1,23 @@
-<!--TODO Limpaar esses componente-->
+<div class="sticker">
+  <div
+    *ngIf="ShouldShowImageNumber(imageNumber.value)"
+    class="sticker-text text"
+  >
+    <p>
+      {{ textContent | async }}
+    </p>
+  </div>
+  <div class="sticker-image image">
+    <img [src]="urlImage | async" alt="{{ urlImage }}" />
+    <div class="sticker-number">
+      <div class="sticker-number-content">
+        {{ imageNumber | async }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--TODO Limpaar esses componente
 <div class="" *ngIf="controllerAsNumber == 0">
   <p
     *ngIf="hardnessType == false"
@@ -54,4 +73,4 @@
   >
     {{ stickerContent }}
   </p>
-</div>
+</div>-->

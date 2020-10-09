@@ -10,7 +10,7 @@ import {
 //import Sticker from '../../models/sticker.js';
 import { AllStickers, Sticker } from "../../../class/stickers";
 import { PageFlip } from "page-flip";
-// import { TypeOfSticker } from "../../../interfaces/type-of-sticker.enum";
+// import { TypeOfSticker } from '../../../interfaces/type-of-sticker.enum';
 import { Subject, BehaviorSubject } from "rxjs";
 /*https://stackblitz.com/edit/ngx-owl-carousel-o?file=src%2Fapp%2Fapp.component.ts*/
 
@@ -21,33 +21,31 @@ import { Subject, BehaviorSubject } from "rxjs";
 })
 export class PageComponent implements OnInit, AfterViewInit, AfterViewChecked {
   @Input() pageToView: any;
-  pageTitle: Subject<string>;
-
+  pageTitle: BehaviorSubject<string>;
+  type:BehaviorSubject<string>;
+  
   constructor(private cdr: ChangeDetectorRef) {
     this.pageTitle = new BehaviorSubject("ERRO AO CARREGAR ESSE DADO ");
+    this.type = new BehaviorSubject("ERRO AO CARREGAR ESSE DADO ");
   }
   ngAfterViewChecked(): void {
-    this.cdr.detectChanges();
+    // this.cdr.detectChanges();
   }
 
   ngAfterViewInit(): void {
     this.pageTitle.next(this.pageToView.ID);
-    // this.pageFlip = new PageFlip(document.getElementById("book"), {
-    //   width: 550,
-    //   height: 730,
-    //   size: "stretch",
-    //   minWidth: 365,
-    //   maxWidth: 800,
-    //   minHeight: 620,
-    //   maxHeight: 1350,
-    //   showCover: true,
-    // });
-    // this.pageFlip.loadFromHTML(document.querySelectorAll(".my-page"));
+    this.type.next(this.pageToView.stickers[0].typeOfSticker);
+
+    //this.pageToView.stickers[0].typeOfStickers
   }
 
   ngOnInit(): void {}
 
   public ShouldCreateAnPage(description: string): boolean {
     return description.length > 270 || description.length <= 0;
+  }
+
+  public ShouldApplyCover(val:string):boolean{
+    return val == "capa";
   }
 }
