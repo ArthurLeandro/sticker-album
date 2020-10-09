@@ -29,7 +29,7 @@ export class PageComponent implements OnInit, AfterViewInit, AfterViewChecked {
     this.type = new BehaviorSubject("ERRO AO CARREGAR ESSE DADO ");
   }
   ngAfterViewChecked(): void {
-    // this.cdr.detectChanges();
+    this.cdr.detectChanges();
   }
 
   ngAfterViewInit(): void {
@@ -45,7 +45,4 @@ export class PageComponent implements OnInit, AfterViewInit, AfterViewChecked {
     return description.length > 270 || description.length <= 0;
   }
 
-  public ShouldApplyCover(val:string):boolean{
-    return val == "capa";
-  }
 }

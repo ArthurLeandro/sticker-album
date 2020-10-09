@@ -1,8 +1,9 @@
-<div class="page-sticker" *ngFor="let stick of pageToView.stickers">
-  <app-sticker
-    [ngClass]="{ 'background-image': ShouldApplyCover(type.value) }"
-    [sticker]="stick"
-  ></app-sticker>
+<div
+  style="position: relative"
+  class="page-sticker"
+  *ngFor="let stick of pageToView.stickers"
+>
+  <app-sticker [sticker]="stick"></app-sticker>
 </div>
 
 <!-- <div class="row d-flex justify-content-center">

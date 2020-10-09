@@ -1,19 +1,28 @@
 <div class="sticker">
   <div
-    *ngIf="ShouldShowImageNumber(imageNumber.value)"
+    *ngIf="ShouldShowTextContent(textContent.value)"
     class="sticker-text text"
+    [className]="anchor.value"
   >
-    <p>
+    <p [className]="anchor.value">
       {{ textContent | async }}
     </p>
   </div>
-  <div class="sticker-image image">
-    <img [src]="urlImage | async" alt="{{ urlImage }}" />
-    <div class="sticker-number">
+  <div
+    [ngClass]="{
+      'background-image': ShouldApplyCover(type.value)
+    }"
+    class="sticker-image image"
+  >
+    <img [className]="anchor.value" [src]="urlImage | async" alt=" " />
+    <!-- <div
+      *ngIf="ShouldShowImageNumber(imageNumber.value)"
+      class="sticker-number"
+    >
       <div class="sticker-number-content">
         {{ imageNumber | async }}
       </div>
-    </div>
+    </div> -->
   </div>
 </div>
 

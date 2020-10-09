@@ -1,36 +1,15 @@
-/* .sticker {
-  position: relative; */
-/* text-align: center; */
-/* transform: translate(0%, 0%); */
-
-/* } */
-
-/* .centered {
-  position: absolute;
-  /*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 88 por cento*/
-/* top: 44%; */
-/*Se levar em conta que não tem nenhum tipo de padding ou algo assim esse campo vai de 0 a 14 por cento*/
-/* left: 7%; */
-
-/* transform: translate(-50%, -50%); 
-  color: white;
-} */
-/* 
-.sticker-text-background {
-  background-color: rgb(53, 40, 12);
-  width: 16px;
-  height: 20px;
+p{
+  background-color: rgba(0,0,0,0.052);
+  font-size: 25px;
 }
-
-.sticker-content {
-  max-width: 12.5%;
-} */
+.sticker{
+  padding: 4.2em;
+}
 
 img{
   vertical-align: middle;
   border-style: none;
   width: 100%;
-  height: 100%;
 }
 
 .relative {
@@ -44,6 +23,88 @@ img{
   position: absolute;
   width: 200px;
   height: 200px;
+}
+
+.image{
+  max-width:200px ;
+  max-height: 300px;
+}
+p.capa{}
+img.capa{}
+p.centro{
+  position: absolute;
+  top: 600px;
+  width: 80%;
+}
+p.centro-superior{
+  position: absolute;
+  top: 400px;
+  left: 20%;
+  width: 35%;
+  text-align: center;
+}
+p.esquerda{
+  position: absolute;
+  top: 12%;
+  width: 15%;
+  left: 45%;
+}
+p.direita{
+  position: absolute;
+  top:650px;
+  left: 3;
+  width: 25%;
+}
+p.centro-direita{
+  position: absolute;
+  width: 8%;
+  top: 12%;
+  left: 1%;
+}
+
+img.centro{
+  position: absolute;
+  top: 80%;
+  left: 1%;
+  width: 100%;
+  padding: 1.5em;
+}
+img.centro-superior{
+  position: absolute;
+  top: 12%;
+  left: 25%;
+  width: 45%;
+}
+
+img.esquerda{
+  position: absolute;
+  top: 20%;
+  left: 4%;
+  width: 35%;
+}
+
+img.direita{
+  position: absolute;
+  top: 550px;
+  left: 64%;
+  width: 35%;
+}
+
+img.centro-direita{
+  position: absolute;
+  top: 12%;
+  left: 56%;
+  width: 40%;
+}
+
+.background-image {
+  min-width: 798px;
+  min-height: 600px;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 /* 
 p {
@@ -106,7 +167,7 @@ p {
 }
 
 p {
-  font-size: 15px;
+  /* font-size: 15px; */
   margin: 1.2em;
   line-height: 1.6em;
   width: 100%;
@@ -119,8 +180,6 @@ p {
   margin-left: auto;
   margin-right: auto;
   /* max-width: 50%; */
-  flex-shrink: 0;
-  background-size: cover;
 }
 
 

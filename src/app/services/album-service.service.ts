@@ -15,7 +15,7 @@ export class AlbumService {
             ID: "1",
             texto: {
               textContent: "",
-              anchor: "centro",
+              anchor: "capa",
             },
             imagem: {
               urlImage: "../../assets/images/new_capa-min.png",
@@ -29,14 +29,33 @@ export class AlbumService {
       },
 
       {
+        ID: "-1",
+        stickers: [
+          {
+            ID: "-1",
+            texto: {
+              textContent:
+                "",
+              anchor: "centro",
+            },
+            imagem: {
+              urlImage: "",
+              ID: "-1",
+              orientation: "retrato",
+              stickerNumber: "",
+            },
+            typeOfSticker: "figurinha",
+          },
+        ],
+      },
+      {
         ID: "2",
         stickers: [
           {
             ID: "2",
             texto: {
-              textContent:
-                "Caro (a) aluno (a), é com muito prazer que eu apresento a versão virtual do álbum de figurinhas História da Matemática. Há mais de 20 anos lecionando Matemática para jovens e adultos, eu sempre percebi muita dificuldade por parte da maioria em interpretar problemas e desenvolver cálculos matemáticos. Por isso criei um material que possa motivar os estudantes a praticar os exercícios e estudar de forma mais aprofundada os prazeres da Matemática.",
-              anchor: "centro",
+              textContent:"Caro (a) aluno (a), é com muito prazer que eu apresento a versão virtual do álbum de figurinhas História da Matemática. Há mais de 20 anos lecionando Matemática para jovens e adultos, eu sempre percebi muita dificuldade por parte da maioria em interpretar problemas e desenvolver cálculos matemáticos. Por isso criei um material que possa motivar os estudantes a praticar os exercícios e estudar de forma mais aprofundada os prazeres da Matemática.",
+              anchor: "centro-superior",
             },
             imagem: {
               urlImage: "../../assets/images/creditos_1-min.png",
@@ -44,7 +63,7 @@ export class AlbumService {
               orientation: "retrato",
               stickerNumber: "",
             },
-            typeOfSticker: "capa",
+            typeOfSticker: "figurinha",
           },
         ],
       },
@@ -146,7 +165,7 @@ export class AlbumService {
               anchor: "direita",
             },
             imagem: {
-              urlImage: "../../assets/images/image_2.png",
+              urlImage: "../../assets/images/image_6.png",
               ID: "8",
               orientation: "paisagem",
               stickerNumber: "6",
@@ -195,12 +214,18 @@ export class AlbumService {
             },
             typeOfSticker: "figurinha",
           },
+        ],
+      },
+
+      {
+        ID: "11",
+        stickers: [
           {
             ID: "11",
             texto: {
               textContent:
                 "Esse papiro contém as soluções de problemas práticos envolvendo geometria e trigonometria que os egípcios costumavam resolver.Hoje ele se encontra no British Museum, em Londres, e é conhecido como Papiro de Rhind.Quase tudo que sabemos sobre a matemática dos egípcios ficou registrado no Papiro Ahmes.",
-              anchor: "direita",
+              anchor: "centro-direita",
             },
             imagem: {
               urlImage: "../../assets/images/image_9.png",
@@ -219,7 +244,7 @@ export class AlbumService {
             ID: "12",
             texto: {
               textContent: "",
-              anchor: "centro",
+              anchor: "capa",
             },
             imagem: {
               urlImage: "../../assets/images/new_contra-min.png",

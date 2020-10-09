@@ -29,7 +29,9 @@ export class StickerComponent
 
   // <---- TEXT VARIABLE ---->
   anchor: Subject<string>;
-  textContent: Subject<string>;
+  textContent: BehaviorSubject<string>;
+
+  type:BehaviorSubject<string>;
 
   constructor(private cdr: ChangeDetectorRef) {
     this.imageNumber = new BehaviorSubject("ERRO AO ADRESSAR ESTA FIGURINHA");
@@ -40,10 +42,11 @@ export class StickerComponent
     this.textContent = new BehaviorSubject("ERRO AO ADRESSAR ESTA FIGURINHA");
 
     this.urlImage = new BehaviorSubject("ERRO AO ADRESSAR ESTA FIGURINHA");
+    this.type = new BehaviorSubject("ERRO AO ADRESSAR ESTA FIGURINHA");
   }
 
   ngAfterViewChecked(): void {
-    this.cdr.detectChanges();
+    // this.cdr.detectChanges();
   }
 
   ngAfterViewInit(): void {
@@ -56,11 +59,19 @@ export class StickerComponent
     this.anchor.next(text.anchor);
     this.textContent.next(text.textContent);
     // console.log(this.sticker);
+    this.type.next(this.sticker.typeOfSticker);
   }
 
   ngOnInit(): void {}
 
   public ShouldShowImageNumber(text:string):boolean{
      return text != "";
+  }
+
+  public ShouldApplyCover(val:string):boolean{
+    return val == "capa";
+  }
+  public ShouldShowTextContent(content:string):boolean{
+    return content != "";
   }
 }
