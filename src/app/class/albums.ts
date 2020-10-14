@@ -1,5 +1,6 @@
 import { IAlbum } from "../interfaces/album";
 import { IntroPage } from "../interfaces/intro-page";
+import { I_Page } from '../interfaces/page';
 
 export class Album implements IAlbum {
   /**
@@ -19,6 +20,8 @@ export class Album implements IAlbum {
     this.name = name;
     this.id = ID;
   }
+  ID: number;
+  pages: I_Page[];
 }
 
 export class AllAlbums {

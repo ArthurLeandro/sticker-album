@@ -3,15 +3,11 @@
  */
 export enum TypeOfSticker {
   /**
-   * Somente uma figurinha por página
+   * Capa de uma página
    */
-  ONLY_ONE_IN_PAGE,
+  capa,
   /**
-   * Duas figurinhas por página
+   * Figurinha na página
    */
-  TWO_IN_PAGE,
-  /**
-   * Frente ou página de fundo
-   */
-  BACK_OR_FRONT_COVER,
+  figurinha,
 }

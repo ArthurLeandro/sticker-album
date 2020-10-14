@@ -57,10 +57,12 @@ import { LandingPageComponent } from "./views/landing-page/landing-page.componen
 import { AlbumView } from "./views/album-view/album-view.component";
 import { SellCardComponent } from "./components/store/sell-card/sell-card.component";
 import { BuyerDialogComponent } from "./components/store/buyer-dialog/buyer-dialog.component";
-import { TestComponent } from './views/test/test.component';
-import { TwoStickersComponent } from './components/album/two-stickers/two-stickers.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { AlbumService } from './services/album-service.service';
+import { TestComponent } from "./views/test/test.component";
+import { TwoStickersComponent } from "./components/album/two-stickers/two-stickers.component";
+import { FooterComponent } from "./components/footer/footer.component";
+import { AlbumService } from "./services/album-service.service";
+import { MatFormFieldModule } from "@angular/material/form-field";
+import { MatInputModule } from "@angular/material/input";
 
 @NgModule({
   imports: [
@@ -74,12 +76,15 @@ import { AlbumService } from './services/album-service.service';
     MatListModule,
     BrowserModule,
     AppRoutingModule,
+    MatInputModule,
+    MatFormFieldModule,
     MatButtonModule,
     //MatCheckboxModule,
     MatMenuModule,
     MatButtonModule,
     HttpClientModule,
     ReactiveFormsModule,
+    MatFormFieldModule,
     MatSidenavModule,
     SharedModule,
     NoopAnimationsModule,
@@ -91,7 +96,7 @@ import { AlbumService } from './services/album-service.service';
     { provide: HTTP_INTERCEPTORS, useClass: JwtInterceptor, multi: true },
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     fakeBackendProvider,
-    AlbumService
+    AlbumService,
   ],
   entryComponents: [BuyerDialogComponent],
   declarations: [

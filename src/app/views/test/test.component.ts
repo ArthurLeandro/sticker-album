@@ -21,7 +21,7 @@ export class TestComponent implements OnInit {
       "Criaram também o calendário de 365 dias. Construíram grandes monumentos e grandes cidades.;Os egípcios inventaram o relógio de sol e a balança.",
       7,
       SideOfSticker.LEFT,
-      TypeOfSticker.TWO_IN_PAGE,
+      TypeOfSticker.capa,
       false
     );
   }

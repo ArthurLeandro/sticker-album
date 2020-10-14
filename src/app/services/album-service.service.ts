@@ -1,4 +1,9 @@
 import { Injectable } from "@angular/core";
+import { HttpClient, HttpParams } from "@angular/common/http";
+import { IAlbum } from "../interfaces/album";
+import { Observable } from "rxjs";
+import { environment } from "../../environments/environment";
+import { catchError } from "rxjs/operators";
 
 @Injectable({
   providedIn: "root",
@@ -34,8 +39,7 @@ export class AlbumService {
           {
             ID: "-1",
             texto: {
-              textContent:
-                "",
+              textContent: "",
               anchor: "centro",
             },
             imagem: {
@@ -54,7 +58,8 @@ export class AlbumService {
           {
             ID: "2",
             texto: {
-              textContent:"Caro (a) aluno (a), é com muito prazer que eu apresento a versão virtual do álbum de figurinhas História da Matemática. Há mais de 20 anos lecionando Matemática para jovens e adultos, eu sempre percebi muita dificuldade por parte da maioria em interpretar problemas e desenvolver cálculos matemáticos. Por isso criei um material que possa motivar os estudantes a praticar os exercícios e estudar de forma mais aprofundada os prazeres da Matemática.",
+              textContent:
+                "Caro (a) aluno (a), é com muito prazer que eu apresento a versão virtual do álbum de figurinhas História da Matemática. Há mais de 20 anos lecionando Matemática para jovens e adultos, eu sempre percebi muita dificuldade por parte da maioria em interpretar problemas e desenvolver cálculos matemáticos. Por isso criei um material que possa motivar os estudantes a praticar os exercícios e estudar de forma mais aprofundada os prazeres da Matemática.",
               anchor: "centro-superior",
             },
             imagem: {
@@ -258,8 +263,67 @@ export class AlbumService {
       },
     ],
   };
+  album: Observable<IAlbum>;
+  constructor(private http: HttpClient) {}
 
-  constructor() {}
+  public GetAlbum(): void {
+    let params = new HttpParams().set("ID", "1");
+    this.album = this.http.get<IAlbum>(environment.SERVER_URL + "/album", {
+      params,
+    });
+  }
+
+  public CreateAlbum(album: IAlbum): void {
+    let newAlbum = this.http
+      .post<IAlbum>(environment.SERVER_URL + "/album", album)
+      .subscribe(
+        (res) => {
+          console.log("O album  " + res.name + " está sendo inserido");
+        },
+        (err) => {
+          console.error("Erro ocorrido: " + err);
+        },
+        () => {
+          console.log("O album terminou de ser inserido");
+        }
+      );
+  }
+
+  public UpdateAlbum(id: number, album: IAlbum) {
+    let params = new HttpParams().set("ID", id.toString());
+    let updateAlbum = this.http
+      .patch<IAlbum>(environment.SERVER_URL + "/album", { params })
+      .subscribe(
+        (res) => {
+          console.log("O album  " + res.name + " está sendo inserido");
+        },
+        (err) => {
+          console.error("Erro ocorrido: " + err);
+        },
+        () => {
+          console.log("O album terminou de ser inserido");
+        }
+      );
+    updateAlbum = null;
+  }
+
+  public DeleteAlbum(id: number) {
+    let params = new HttpParams().set("ID", id.toString());
+    let deleteAlbum = this.http
+      .delete<IAlbum>(environment.SERVER_URL + "/album", { params })
+      .subscribe(
+        (res) => {
+          console.log("O album  " + res.name + " está sendo inserido");
+        },
+        (err) => {
+          console.error("Erro ocorrido: " + err);
+        },
+        () => {
+          console.log("O album terminou de ser inserido");
+        }
+      );
+    deleteAlbum = null;
+  }
 
   public GetJsonFile(pathToGet: string): any {
     return JSON.parse(JSON.stringify(this.object));

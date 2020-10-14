@@ -5,15 +5,32 @@
     <mat-divider></mat-divider>
   </div>
   <div class="col-12">
-    <div class="row">
-      <div class="col-md-6 col-12">
+    <div class="dialog row">
+      <div class="dialog-image col-md-3 col-12">
         <img class="image" [src]="urlImage" alt="" />
       </div>
-      <div class="col-md-6 col-12">
+      <div class="dialog-text col-md-6 col-12">
         <p class="buyer-dialog-paragraph">{{ description }}</p>
-        <p class="buyer-dialog-paragraph-price">
-          {{ productPrice | currency: "R$" }}
-        </p>
+      </div>
+      <div class="dialog-info d-flex justify-content-center col-md-3 col-12">
+        <div>
+          <p class="dialog-info-price">Preço</p>
+          <p class="buyer-dialog-paragraph-price">
+            {{ productPrice | currency: "R$" }}
+          </p>
+          <mat-form-field>
+            <mat-label class="dialog-info-price">Quantidade</mat-label>
+            <input
+              #quantityV
+              [formControl]="quantity"
+              matInput
+              placeholder="1"
+            />
+            <mat-error *ngIf="quantity.hasError('pattern')">
+              Entre com um valor númerico maior que zero
+            </mat-error>
+          </mat-form-field>
+        </div>
       </div>
     </div>
     <mat-divider></mat-divider>
@@ -24,7 +41,7 @@
         <span class="material-icons"> add_shopping_cart </span>Adicionar
       </button>
       <button mat-raised-button color="warn" (click)="OnClose()">Fechar</button>
-      <button (click)="OnBuy()" mat-raised-button color="primary">
+      <button (click)="OnBuy(quantityV)" mat-raised-button color="primary">
         Comprar
       </button>
     </div>

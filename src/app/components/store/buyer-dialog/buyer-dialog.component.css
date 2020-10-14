@@ -12,3 +12,27 @@ button {
   max-width: 300px;
   max-height: 450px;
 }
+
+.dialog{}
+
+.dialog-image{
+}
+
+.dialog-text{
+  padding: 2em;
+}
+
+.dialog-info{
+  padding: 3em;
+}
+
+.dialog-info-price{
+  color: rgba(0,0,0,.44);
+  text-transform: uppercase;
+}
+
+.buyer-dialog-paragraph-price{
+  font-size: 18px;
+  font-weight: bold;
+  padding-top: .4em;
+}
