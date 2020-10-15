@@ -2,9 +2,9 @@
   <div class="background row">
     <img class="col-12 sell-card-image" [src]="urlImage" alt="" />
     <div class="content col-12">
-      <a mat-button [routerLink]="['/store']" (click)="OpenDialogBuyer()"
-        ><h2 class="content-product-name">{{ productName }}</h2></a
-      >
+      <a mat-button [routerLink]="['/store']" (click)="OpenDialogBuyer()">
+        <h2 class="content-product-name">{{ productName }}</h2>
+      </a>
       <p class="content-description">{{ description }}</p>
       <p class="content-price">{{ price | currency: "R$" }}</p>
     </div>
@@ -14,6 +14,7 @@
         <button mat-button class="content-action-cart">
           <span class="material-icons"> add_shopping_cart </span>Carrinho
         </button>
+        <div class="material-icons">receipt</div>
       </div>
     </div>
   </div>

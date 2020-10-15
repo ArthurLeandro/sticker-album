@@ -16,12 +16,12 @@
       <mat-divider></mat-divider>
       <mat-list-item>
         <span class="material-icons"> receipt </span>
-        <a mat-button [routerLink]="['/store']">Figurinhas</a>
+        <button mat-button (click)="OnStickerFilter()">Figurinhas</button>
       </mat-list-item>
       <mat-divider></mat-divider>
       <mat-list-item>
         <span class="material-icons"> book </span>
-        <a mat-button [routerLink]="['/store']">Álbuns</a>
+        <button mat-button (click)="OnAlbumFilter()">Álbuns</button>
       </mat-list-item>
       <mat-divider></mat-divider>
     </mat-list>
@@ -33,13 +33,7 @@
         class="col-12 col-sm-6 col-md-4"
         *ngFor="let product of products; index as i"
       >
-        <app-sell-card
-          [urlImage]="product.urlImage"
-          [productName]="product.productName"
-          [description]="product.description"
-          [price]="product.productPrice"
-        >
-        </app-sell-card>
+        <app-sell-card [product]="product"> </app-sell-card>
       </div>
       <!-- TODO make this in a ng for -->
       <!-- <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>

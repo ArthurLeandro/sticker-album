@@ -21,6 +21,7 @@ import { UnauthenticatedComponent } from "./views/unauthenticated/unauthenticate
 import { StoreComponent } from "./views/store/store.component";
 import { AlbumView } from "./views/album-view/album-view.component";
 import { TestComponent } from "./views/test/test.component";
+import { LoaderComponent } from "./components/loader/loader.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/album-view", pathMatch: "full" },
@@ -36,6 +37,7 @@ const routes: Routes = [
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "introduction" },
   { path: "test", component: TestComponent },
+  { path: "loading", component: LoaderComponent },
   { path: "**", component: NotFoundComponent },
   { path: "admin", component: AdminComponent },
   { path: "contact", component: ContactComponent },

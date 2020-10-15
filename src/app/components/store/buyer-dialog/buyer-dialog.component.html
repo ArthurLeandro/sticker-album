@@ -18,18 +18,33 @@
           <p class="buyer-dialog-paragraph-price">
             {{ productPrice | currency: "R$" }}
           </p>
-          <mat-form-field>
-            <mat-label class="dialog-info-price">Quantidade</mat-label>
-            <input
-              #quantityV
-              [formControl]="quantity"
-              matInput
-              placeholder="1"
-            />
-            <mat-error *ngIf="quantity.hasError('pattern')">
-              Entre com um valor númerico maior que zero
-            </mat-error>
-          </mat-form-field>
+          <form [formGroup]="transactionForm">
+            <mat-form-field>
+              <mat-label class="dialog-info-price">Quantidade</mat-label>
+              <input
+                matInput
+                placeholder="1"
+                [formControl]="quantity"
+              />
+              <mat-hint align="end"> Valor númerico entre 1 e 99</mat-hint>
+              <mat-error *ngIf="quantity.hasError('pattern')">
+                Entre com um valor númerico
+              </mat-error>
+              <mat-error *ngIf="quantity.hasError('min')">
+                Insira um valor maior que zero
+              </mat-error>
+              <mat-error *ngIf="quantity.hasError('max')">
+                Insira um valor menor que 99
+              </mat-error>
+            </mat-form-field>
+            <mat-form-field>
+              <mat-label class="dialog-info-price">Pagamento</mat-label>
+              <mat-select formControlName="payment" formControlName="paymentS">
+                <mat-option value="boleto">Boleto</mat-option>
+                <mat-option value="creditCard">Cartão de Crédito</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </form>
         </div>
       </div>
     </div>
@@ -37,11 +52,15 @@
   </div>
   <div class="col-12 justify-content-end">
     <div class="buyer-dialog-buttons">
-      <button (click)="OnAddCart()" mat-raised-button>
+      <button (click)="OnAddCart(quantity)" mat-raised-button>
         <span class="material-icons"> add_shopping_cart </span>Adicionar
       </button>
       <button mat-raised-button color="warn" (click)="OnClose()">Fechar</button>
-      <button (click)="OnBuy(quantityV)" mat-raised-button color="primary">
+      <button
+        (click)="OnBuy(transactionForm.value)"
+        mat-raised-button
+        color="primary"
+      >
         Comprar
       </button>
     </div>

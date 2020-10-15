@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from "@angular/core";
 import { AllProduct, Product } from "../../class/products";
+import { StoreService } from "../../services/store.service";
 
 @Component({
   selector: "app-store",
@@ -10,7 +11,7 @@ export class StoreComponent implements OnInit, AfterViewInit {
   allProducts: AllProduct;
   public products: Product[];
 
-  constructor() {}
+  constructor(private storeService: StoreService) {}
 
   ngAfterViewInit(): void {}
 
@@ -18,6 +19,24 @@ export class StoreComponent implements OnInit, AfterViewInit {
     this.allProducts = new AllProduct();
     this.allProducts.Init();
     this.products = this.allProducts.allProducts;
-    console.log(this.allProducts.allProducts);
+    // console.log(this.allProducts.allProducts);
+  }
+
+  public OnStickerFilter(): void {
+    //make an request
+    let request = this.storeService.SendRequest();
+    let onlySticker = request.filter((res) => {
+      return res.isSticker == true;
+    });
+    this.products = onlySticker;
+  }
+
+  public OnAlbumFilter(): void {
+    //make an request
+    let request = this.storeService.SendRequest();
+    let onlyAlbum = request.filter((res) => {
+      return res.isSticker == false;
+    });
+    this.products = onlyAlbum;
   }
 }

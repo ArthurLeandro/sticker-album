@@ -63,6 +63,8 @@ import { FooterComponent } from "./components/footer/footer.component";
 import { AlbumService } from "./services/album-service.service";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
+import { MatSelectModule } from "@angular/material/select";
+import { LoaderComponent } from './components/loader/loader.component';
 
 @NgModule({
   imports: [
@@ -79,6 +81,7 @@ import { MatInputModule } from "@angular/material/input";
     MatInputModule,
     MatFormFieldModule,
     MatButtonModule,
+    MatSelectModule,
     //MatCheckboxModule,
     MatMenuModule,
     MatButtonModule,
@@ -101,25 +104,25 @@ import { MatInputModule } from "@angular/material/input";
   entryComponents: [BuyerDialogComponent],
   declarations: [
     AboutComponent,
-    AdminComponent,
     AlbumComponent,
     AppComponent,
     BackCoverComponent,
+    AdminComponent,
     ContactComponent,
     DeveloperComponent,
     ErrorComponent,
-    FrontCoverComponent,
     IntroductionComponent,
-    NavigatorComponent,
     NotFoundComponent,
-    PageComponent,
     PaymentComponent,
     ReportsComponent,
-    SessionPageComponent,
-    StickerComponent,
     StoreComponent,
     UnauthenticatedComponent,
     UnauthorizedComponent,
+    FrontCoverComponent,
+    NavigatorComponent,
+    PageComponent,
+    SessionPageComponent,
+    StickerComponent,
     ConfirmDialogComponent,
     AlbumViewerComponent,
     IntroductionViewerComponent,
@@ -132,6 +135,7 @@ import { MatInputModule } from "@angular/material/input";
     TestComponent,
     TwoStickersComponent,
     FooterComponent,
+    LoaderComponent,
   ],
   bootstrap: [AppComponent],
 })
