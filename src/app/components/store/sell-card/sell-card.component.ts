@@ -27,7 +27,6 @@ export class SellCardComponent implements OnInit, AfterContentInit {
   ngOnInit(): void {}
 
   public OpenDialogBuyer(): void {
-    console.log(this.product);
     let dialogConfig = new MatDialogConfig();
     dialogConfig.height = "600px";
     dialogConfig.width = "1200px";

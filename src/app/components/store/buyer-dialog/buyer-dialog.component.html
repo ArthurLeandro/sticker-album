@@ -14,18 +14,14 @@
       </div>
       <div class="dialog-info d-flex justify-content-center col-md-3 col-12">
         <div>
-          <p class="dialog-info-price">Preço</p>
+          <p class="dialog-info-price">preço</p>
           <p class="buyer-dialog-paragraph-price">
             {{ productPrice | currency: "R$" }}
           </p>
           <form [formGroup]="transactionForm">
             <mat-form-field>
               <mat-label class="dialog-info-price">Quantidade</mat-label>
-              <input
-                matInput
-                placeholder="1"
-                [formControl]="quantity"
-              />
+              <input matInput value="1" placeholder="1" [formControl]="quantity" />
               <mat-hint align="end"> Valor númerico entre 1 e 99</mat-hint>
               <mat-error *ngIf="quantity.hasError('pattern')">
                 Entre com um valor númerico
@@ -45,6 +41,10 @@
               </mat-select>
             </mat-form-field>
           </form>
+          <p class="dialog-info-price">Valor total</p>
+          <p class="buyer-dialog-paragraph-price">
+            {{ totalAmount | currency: "R$" }}
+          </p>
         </div>
       </div>
     </div>

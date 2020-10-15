@@ -21,6 +21,7 @@ export class BuyerDialogComponent implements OnInit {
   @Input() description: string = "Essa é uma coletânea de x figurinhas";
   @Input() productPrice: number = 0;
 
+  totalAmount: number = 0;
 
   quantity: FormControl;
   transactionForm: FormGroup;
@@ -40,6 +41,7 @@ export class BuyerDialogComponent implements OnInit {
       Validators.min(1),
       Validators.max(99),
     ]);
+    this.totalAmount = this.productPrice;
   }
 
   ngOnInit(): void {
@@ -47,13 +49,15 @@ export class BuyerDialogComponent implements OnInit {
       quantityN: this.quantity,
       paymentS: "",
     });
+    this.transactionForm.valueChanges.subscribe((res) => {
+      this.totalAmount = Number(res.quantityN) * this.productPrice;
+    });
   }
   OnClose() {
     this.dialogRef.close();
     //TODO send data as output if either add to cart or bought some along this line
   }
   OnBuy(quantity: any) {
-    console.log(this.transactionForm.value);
     let quant: number =
       Number(this.transactionForm.value.quantityN) > 0
         ? Number(this.transactionForm.value.quantityN)
