@@ -21,7 +21,12 @@
           <form [formGroup]="transactionForm">
             <mat-form-field>
               <mat-label class="dialog-info-price">Quantidade</mat-label>
-              <input matInput value="1" placeholder="1" [formControl]="quantity" />
+              <input
+                matInput
+                value="1"
+                placeholder="1"
+                [formControl]="quantity"
+              />
               <mat-hint align="end"> Valor númerico entre 1 e 99</mat-hint>
               <mat-error *ngIf="quantity.hasError('pattern')">
                 Entre com um valor númerico
@@ -56,11 +61,7 @@
         <span class="material-icons"> add_shopping_cart </span>Adicionar
       </button>
       <button mat-raised-button color="warn" (click)="OnClose()">Fechar</button>
-      <button
-        (click)="OnBuy(transactionForm.value)"
-        mat-raised-button
-        color="primary"
-      >
+      <button (click)="OnBuy()" mat-raised-button color="primary">
         Comprar
       </button>
     </div>

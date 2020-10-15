@@ -9,6 +9,7 @@ import {
 import { Transaction } from "../../../class/Transaction";
 import { Item } from "../../../interfaces/item";
 import { TransactionService } from "../../../services/transaction.service";
+import { Buyer } from "src/app/class/Buyer";
 
 @Component({
   selector: "app-buyer-dialog",
@@ -57,7 +58,7 @@ export class BuyerDialogComponent implements OnInit {
     this.dialogRef.close();
     //TODO send data as output if either add to cart or bought some along this line
   }
-  OnBuy(quantity: any) {
+  OnBuy() {
     let quant: number =
       Number(this.transactionForm.value.quantityN) > 0
         ? Number(this.transactionForm.value.quantityN)
@@ -65,11 +66,19 @@ export class BuyerDialogComponent implements OnInit {
     let value: number = quant * this.productPrice;
     let transaction: Transaction;
     transaction = new Transaction(
-      this.transactionForm.value.paymentS, //TODO make in a way to s.bchoose the option of payment
+      this.transactionForm.value.paymentS,
       value,
       "algum_token_da_transação",
       [new Item(quant, value, this.description)],
-      quant
+      quant,
+      new Buyer( //TODO refatorar para um serviço
+        "Clodoaldo",
+        "clodoaldo@gmail.com",
+        "092354653",
+        "ES",
+        "+55 37 98643 3759",
+        "12/09/1979"
+      )
     );
     this.transactionService.OnTransactionConcluded(transaction);
     this.OnClose();

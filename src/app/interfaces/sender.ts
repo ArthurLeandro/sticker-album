@@ -2,7 +2,7 @@ import { Item } from "./item";
 /**
  * Dados do usuário que está efeutando a compra
  */
-export interface Buyer {
+export interface I_Buyer {
   /**
    * Nome do comprador
    */
@@ -28,6 +28,7 @@ export interface Buyer {
    */
   birthDate: string;
 }
+
 /**
  * Usar somente caso o comprador por catão não for o dono do próprio cartão
  */
@@ -57,6 +58,7 @@ export interface CreditCarHolder {
    */
   birthDate: string;
 }
+
 /**
  * Essa interface é utilizada para enviar uma cobrança para uma casa.
  */
