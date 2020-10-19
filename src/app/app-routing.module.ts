@@ -23,6 +23,39 @@ import { AlbumView } from "./views/album-view/album-view.component";
 import { TestComponent } from "./views/test/test.component";
 import { LoaderComponent } from "./components/loader/loader.component";
 
+/*
+  Extras stuff
+
+  ! Parametrizes Routes
+  WHAT
+    São parametros que são enviados pela url, ex.: api/users/:21 .
+  WHY
+    Algumas rotas precisam de algum tipo de parametro para enviar para o backend e auxiliar no request de dados, é uma forma de auxiliar o get onde você pode passar parâmetros.
+  HOW 
+    Declarar: users/:id
+    Pegar dados dentro da rota:
+      Precisa do serviço ActivatedRoute vindo do '@angular/router',
+      ele deve ser injetado como uma depêndencia.
+      Para pegar algum dado é simples, por exemplo o id previamente:
+        return this.activatedRoute.snapshot.paramMap.get("id"); 
+
+  ! Guarda
+
+  WHAT
+    É um serviço que é injetado e pode implementar as seguintes interfaces. CanAcivate,CanDeactivate,CanActivateChild,Resolve,CanLoad que são ofertadas pelo 
+      '@angular/router' , e retornam algo em forma de boolean, seja uma Promise, uma Observable ou o próprio valor. 
+  WHY
+    Existem algumas rotas que devem ser protegidas e não podem ser acessadas meramente pela url. Como por exemplo dashboard etc. 
+  HOW 
+    Desenvolvimento da lógica:
+      Cria um serviço e escolhe qual dessas interfaces será atribuída a ele. Na implementação da interface efetua um tipo de análise baseado em um estado ou 
+      token que o usuário possui na sessão atual, e assim decide o que fazer com ele. Esse serviço é aplicado 
+    Utilização:
+      No array de rotas você consgue criar um atributo do mesmo tipo da interface da rota, assim você passa o serviço para esse atributo e já estará 
+      funcionando.
+
+  */
+
 const routes: Routes = [
   { path: "", redirectTo: "/album-view", pathMatch: "full" },
   { path: "introduction", redirectTo: "/album-view", pathMatch: "full" },
