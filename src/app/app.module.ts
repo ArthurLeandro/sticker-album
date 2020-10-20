@@ -64,7 +64,8 @@ import { AlbumService } from "./services/album-service.service";
 import { MatFormFieldModule } from "@angular/material/form-field";
 import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
-import { LoaderComponent } from './components/loader/loader.component';
+import { LoaderComponent } from "./components/loader/loader.component";
+import { DevGuard } from "./guards/dev-guard.guard";
 
 @NgModule({
   imports: [
@@ -100,6 +101,7 @@ import { LoaderComponent } from './components/loader/loader.component';
     { provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true },
     fakeBackendProvider,
     AlbumService,
+    DevGuard,
   ],
   entryComponents: [BuyerDialogComponent],
   declarations: [

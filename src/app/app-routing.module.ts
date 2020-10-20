@@ -22,6 +22,7 @@ import { StoreComponent } from "./views/store/store.component";
 import { AlbumView } from "./views/album-view/album-view.component";
 import { TestComponent } from "./views/test/test.component";
 import { LoaderComponent } from "./components/loader/loader.component";
+import { DevGuard } from "./guards/dev-guard.guard";
 
 /*
   Extras stuff
@@ -58,31 +59,30 @@ import { LoaderComponent } from "./components/loader/loader.component";
 
 const routes: Routes = [
   { path: "", redirectTo: "/album-view", pathMatch: "full" },
-  { path: "introduction", redirectTo: "/album-view", pathMatch: "full" },
+  { path: "introduction", component: IntroductionComponent },
+  // { path: "introduction", redirectTo: "/album-view", pathMatch: "full" },
   { path: "login", component: LoginComponent },
   { path: "signup", component: SignupComponent },
   { path: "about", component: AboutComponent },
-  { path: "album-view", component: AlbumView },
+  { path: "album-view", component: AlbumView, canActivate: [AuthGuard] },
   { path: "store", component: StoreComponent },
-  { path: "payment", component: PaymentComponent },
+  { path: "payment", component: PaymentComponent, canActivate: [AuthGuard] },
   { path: "error", component: ErrorComponent },
   { path: "unauthorized", component: UnauthorizedComponent },
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "introduction" },
   { path: "test", component: TestComponent },
   { path: "loading", component: LoaderComponent },
-  { path: "**", component: NotFoundComponent },
-  { path: "admin", component: AdminComponent },
+  { path: "admin", component: AdminComponent, canActivate: [DevGuard] },
   { path: "contact", component: ContactComponent },
-  { path: "developer", component: DeveloperComponent },
-  { path: "introduction", component: IntroductionComponent },
-  { path: "reports", component: ReportsComponent },
-  // { path: "**", component: NotFoundComponent },
+  { path: "developer", component: DeveloperComponent, canActivate: [DevGuard] },
+  { path: "reports", component: ReportsComponent, canActivate: [DevGuard] },
+  { path: "**", component: NotFoundComponent },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers: [AuthGuard],
+  providers: [AuthGuard, DevGuard],
 })
 export class AppRoutingModule {}

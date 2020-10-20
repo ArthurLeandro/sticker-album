@@ -29,6 +29,7 @@
     "classlist.js": "^1.1.20150312",
     "jquery": "^3.5.1",
     "material-design-icons": "^3.0.1",
+    "moment": "^2.29.1",
     "ngx-owl-carousel-o": "^4.0.0",
     "page-flip": "^2.0.0",
     "popper.js": "^1.16.1",

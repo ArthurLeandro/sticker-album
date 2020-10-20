@@ -18,23 +18,27 @@ export class JwtInterceptor implements HttpInterceptor {
     request: HttpRequest<any>,
     next: HttpHandler
   ): Observable<HttpEvent<any>> {
-    // add auth header with jwt if user is logged in and request is to the api url
-    const user = this.authService.userValue;
-    const isLoggedIn = user && user.token;
-    const isApiUrl: boolean = request.url.startsWith(environment.apiUrl);
-    if (isLoggedIn && isApiUrl) {
-      request = request.clone({
-        setHeaders: {
-          Authorization: `Bearer ${user.token}`,
-        },
+    let idToken = localStorage.getItem(environment.JWT_TOKEN_ID || "idToken");
+    if (idToken) {
+      let clonnedRequest: HttpRequest<any> = request.clone({
+        headers: request.headers.set("Authorization", "Bearer " + idToken),
       });
+      return next.handle(clonnedRequest);
+    } else {
+      return next.handle(request);
     }
-
-    return next.handle(request);
+    //COMO ESTAVA ANTES
+    // add auth header with jwt if user is logged in and request is to the api url
+    // const user = this.authService.userValue;
+    // const isLoggedIn = user && user.token;
+    // const isApiUrl: boolean = request.url.startsWith(environment.apiUrl);
+    // if (isLoggedIn && isApiUrl) {
+    //   request = request.clone({
+    //     setHeaders: {
+    //       Authorization: `Bearer ${user.token}`,
+    //return next.handle(request);
+    //     },
+    //   });
+    // }
   }
-  /*
-		* Se precisar de implementar um JWT Token
-		ASP.NET Core3 and Angular page: 550
-		Tem todo o processo e explicação
-	*/
 }
