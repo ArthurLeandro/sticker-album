@@ -1,0 +1,50 @@
+.sign-up{
+  height: 100vh;
+  padding: 2em;
+}
+
+.card-header{
+background-color: var(--color-secondary-1-4);
+}
+
+h3{
+  color: var(--color-primary-1);
+}
+
+button{
+  margin: .5em;
+}
+
+.mat-raised-button{
+background-color: var(--color-complement-0);
+color: var(--color-secondary-1-4);
+}
+.mat-flat-button{
+background-color: var(--color-complement-1);
+color: var(--color-secondary-1-4);
+}
+
+@media only screen and (min-width: 175px) and (max-width: 575px) {
+
+  .sign-up{
+    height: 80vh;
+    padding: .3em;
+  }
+}
+@media screen and (min-width: 576px) and (max-width:767px){
+
+  .sign-up{
+    height: 140vh;
+    padding: .3em;
+  }
+}/*col-sm*/
+@media screen and (min-width: 768px) and (max-width:961px){
+
+  .sign-up{
+    height: 80vh;
+    padding: .3em;
+  }
+}/*col-md*/
+@media screen and (min-width: 962px) and (max-width:1199px){
+
+}/*col-lg*/

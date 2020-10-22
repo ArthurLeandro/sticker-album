@@ -10,7 +10,9 @@ import {
 import { MatDialog } from "@angular/material/dialog";
 
 @Component({
+  selector: "app-login",
   templateUrl: "login.component.html",
+  styleUrls: ["./login.component.css"],
 })
 export class LoginComponent implements OnInit {
   loginForm: FormGroup;
@@ -28,7 +30,7 @@ export class LoginComponent implements OnInit {
     public dialog: MatDialog
   ) {
     if (this.authService.userValue) {
-      this.router.navigate(["/introduction"]); //TODO utilizar o auth service aqui tava mandando para o "/" tem que descobrir o pq
+      this.router.navigate(["/"]);
     }
   }
 
@@ -59,12 +61,7 @@ export class LoginComponent implements OnInit {
       .subscribe(
         (data) => {
           // this.router.navigate([this.returnUrl]);
-          this.router.navigate([
-            ["../introduction"],
-            {
-              relativeTo: this.route,
-            },
-          ]);
+          this.router.navigate(["/album-view"]);
         },
         (error) => {
           console.log("Error occurred during auth " + error);

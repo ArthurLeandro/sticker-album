@@ -2,6 +2,19 @@
   flex: 1 1 auto;
 }
 
+mat-toolbar{
+  background: var(--color-primary-3);
+}
+
+.mat-icon-button{
+  color: var(--color-secondary-2-2);
+}
+
+.mat-menu-item{
+color: var(--color-primary-3);
+}
+
+
 /* .mat-toolbar {
   margin-bottom: 16px;
 } */

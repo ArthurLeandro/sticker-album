@@ -5,16 +5,6 @@ img {
 }
 
 
-@media only screen and (min-width: 175px) and (max-width: 575px) {
-  #book {
-    padding: 0.3em;
-  }
-
-  img {
-    width: 369px;
-    height: 490px;
-  }
-}
 
 /*col*/
 .test {
@@ -36,3 +26,18 @@ img {
   width: 200px;
   height: 200px;
 }
+
+/*O normal será o col-xl*/
+@media only screen and (min-width: 175px) and (max-width: 575px) {
+  #book {
+    padding: 0.3em;
+  }
+
+  img {
+    width: 369px;
+    height: 490px;
+  }
+}
+@media screen and (min-width: 576px) and (max-width:767px){}/*col-sm*/
+@media screen and (min-width: 768px) and (max-width:961px){}/*col-md*/
+@media screen and (min-width: 962px) and (max-width:1199px){}/*col-lg*/

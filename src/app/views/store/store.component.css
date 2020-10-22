@@ -2,7 +2,7 @@
   /* position: absolute; */
   top: 0;
   left: 0;
-  background: rgb(222, 182, 98);
+  background: var(--color-secondary-1-2);
 }
 
 .content {
@@ -56,3 +56,59 @@ li {
 .items-list {
   background-color: white;
 }
+
+.store-filters{
+  padding: 2em;
+}
+
+.mat-flat-button{
+  width: 80px;
+  left: 40%;
+  background-color: var(--color-primary-4);
+  color:var(--color-complement-1);
+}
+
+.mat-button{
+  color:var(--color-primary-4);
+}
+.material-icons{
+  color:var(--color-primary-1);
+}
+
+h4{
+  color: var(--color-secondary-1-4);
+}
+
+button:hover{
+background-color: var(--color-complement-1);
+}
+
+/*O normal será o col-xl*/
+@media screen and (min-width: 175px) and (max-width:575px){
+  .store-filter{
+    margin: 0;
+    padding: 0.2em;
+  }
+
+ .store-filters-header{
+  font-size: 20px;
+ } 
+
+ .mat-list-item{
+   font-size: 14px;
+ }
+
+ .lading-title{
+   font-size: 30px;
+ }
+
+ .landing-content{
+   font-size: 20px;
+   margin: 1em 0px 1.5em 0px;
+ }
+
+
+}/*col*/
+@media screen and (min-width: 576px) and (max-width:767px){}/*col-sm*/
+@media screen and (min-width: 768px) and (max-width:961px){}/*col-md*/
+@media screen and (min-width: 962px) and (max-width:1199px){}/*col-lg*/

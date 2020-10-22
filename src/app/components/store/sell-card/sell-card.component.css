@@ -2,8 +2,12 @@
   color: rgba(255, 0, 0, 0.75);
 }
 
+.content-description{
+  color:var(--color-secondary-1-2);
+}
+
 .content-product-name {
-  color: #4e46ec;
+  color: var(--color-secondary-1-4);
 }
 
 .sell-card {
@@ -21,6 +25,26 @@
   min-width: 100px;
   min-height: 150px;
 }
+
+
+.sell-card{
+  padding: .7em;
+}
+
+.background{
+  box-shadow: 0 2px 1px -1px rgba(0, 0, 0, .2),
+  0 1px 1px 0 rgba(0, 0, 0, .14),
+  0 1px 3px 0 rgba(0, 0, 0, .12);
+}
+
+.material-icons{
+  color: var(--color-primary-3);
+}
+
+.mat-button:hover{
+  background-color: var(--color-complement-1);
+}
+
 
 /* .content-action-cart {
   background-color: rgb(255, 145, 0);

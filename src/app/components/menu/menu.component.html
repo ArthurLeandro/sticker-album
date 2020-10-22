@@ -1,4 +1,5 @@
-<mat-toolbar style="background-color: cadetblue">
+<!-- <mat-toolbar style="background-color: cadetblue"> -->
+<mat-toolbar>
   <button mat-icon-button [matMenuTriggerFor]="menu">
     <span class="material-icons">more_vert</span>
   </button>
@@ -53,6 +54,7 @@
       routerLink="/logout"
       routerLinkActive="selected"
       title="Sair"
+      (click)="Logout()"
     >
       <span class="material-icons">exit_to_app</span>
     </button>

@@ -21,6 +21,7 @@ export class AlbumViewerComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
   OnAddShopingList() {
     this.cart = !this.cart;
     if (!this.cart) {
@@ -29,6 +30,7 @@ export class AlbumViewerComponent implements OnInit {
       this.cartBasic = "basic";
     }
   }
+  
   OnLiked() {
     this.like = !this.like;
     if (this.like) {
@@ -37,6 +39,7 @@ export class AlbumViewerComponent implements OnInit {
       this.likeBasic = "basic";
     }
   }
+
   OnLoved() {
     this.love = !this.love;
     if (this.love) {
@@ -45,4 +48,5 @@ export class AlbumViewerComponent implements OnInit {
       this.loveBasic = "basic";
     }
   }
+
 }

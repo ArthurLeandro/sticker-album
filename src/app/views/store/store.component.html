@@ -1,50 +1,51 @@
-<div class="row background">
-  <div class="col-12 d-flex justify-content-center">
-    <div class="content">
-      <h1 class="landing-title">Catalogo</h1>
-      <p class="landing-content">Encontre o que precisa para sua coleção.</p>
-      <a [routerLink]="['/']" class="btn btn-outline-dark">Saiba mais</a>
+<div class="store">
+  <div class="row background">
+    <div class="col-12 d-flex justify-content-center">
+      <div class="content">
+        <h1 class="landing-title text-center">Catalogo</h1>
+        <p class="landing-content">Encontre o que precisa para sua coleção.</p>
+        <a
+          [routerLink]="['/']"
+          mat-flat-button
+          class="store-buttons d-flex justify-content-center"
+          >Saiba mais</a
+        >
+      </div>
     </div>
   </div>
-</div>
-<div class="row">
-  <div class="offset-1 col-3">
-    <mat-list>
-      <h4 class="landing-title justify-content-center d-flex">
-        Categorias de Produtos
-      </h4>
-      <mat-divider></mat-divider>
-      <mat-list-item>
-        <span class="material-icons"> receipt </span>
-        <button mat-button (click)="OnStickerFilter()">Figurinhas</button>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-      <mat-list-item>
-        <span class="material-icons"> book </span>
-        <button mat-button (click)="OnAlbumFilter()">Álbuns</button>
-      </mat-list-item>
-      <mat-divider></mat-divider>
-    </mat-list>
-  </div>
-  <div class="col-7 items-list">
-    <div class="row">
-      <!-- <p>{{ product.productName }}</p> -->
-      <div
-        class="col-12 col-sm-6 col-md-4"
-        *ngFor="let product of products; index as i"
-      >
-        <app-sell-card [product]="product"> </app-sell-card>
+  <div class="row">
+    <!-- region FILTER -->
+    <div class="store-filters col-12 col-lg-3">
+      <mat-list>
+        <h4
+          class="store-filters-header landing-title justify-content-center d-flex"
+        >
+          Categorias de Produtos
+        </h4>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <span class="material-icons"> receipt </span>
+          <button mat-button (click)="OnStickerFilter()">Figurinhas</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+        <mat-list-item>
+          <span class="material-icons"> book </span>
+          <button mat-button (click)="OnAlbumFilter()">Álbuns</button>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+    </div>
+    <!-- endregion  -->
+    <div class="col-12 col-lg-9 items-list">
+      <div class="row">
+        <!-- <p>{{ product.productName }}</p> -->
+        <div
+          class="col-12 col-sm-12 col-md-4"
+          *ngFor="let product of products; index as i"
+        >
+          <app-sell-card [product]="product"> </app-sell-card>
+        </div>
       </div>
-      <!-- TODO make this in a ng for -->
-      <!-- <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div>
-      <div class="col-6 col-sm-6 col-md-4"><app-sell-card></app-sell-card></div> -->
     </div>
   </div>
 </div>

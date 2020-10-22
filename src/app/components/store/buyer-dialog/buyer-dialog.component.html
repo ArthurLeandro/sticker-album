@@ -6,56 +6,67 @@
   </div>
   <div class="col-12">
     <div class="dialog row">
-      <div class="dialog-image col-md-3 col-12">
+      <div class="dialog-image col-12 col-lg-4 col-md-8">
         <img class="image" [src]="urlImage" alt="" />
       </div>
-      <div class="dialog-text col-md-6 col-12">
+      <div class="dialog-text col-12 col-lg-3 col-md-4">
         <p class="buyer-dialog-paragraph">{{ description }}</p>
       </div>
-      <div class="dialog-info d-flex justify-content-center col-md-3 col-12">
-        <div>
-          <p class="dialog-info-price">preço</p>
-          <p class="buyer-dialog-paragraph-price">
-            {{ productPrice | currency: "R$" }}
-          </p>
-          <form [formGroup]="transactionForm">
-            <mat-form-field>
-              <mat-label class="dialog-info-price">Quantidade</mat-label>
-              <input
-                matInput
-                value="1"
-                placeholder="1"
-                [formControl]="quantity"
-              />
-              <mat-hint align="end"> Valor númerico entre 1 e 99</mat-hint>
-              <mat-error *ngIf="quantity.hasError('pattern')">
-                Entre com um valor númerico
-              </mat-error>
-              <mat-error *ngIf="quantity.hasError('min')">
-                Insira um valor maior que zero
-              </mat-error>
-              <mat-error *ngIf="quantity.hasError('max')">
-                Insira um valor menor que 99
-              </mat-error>
-            </mat-form-field>
-            <mat-form-field>
-              <mat-label class="dialog-info-price">Pagamento</mat-label>
-              <mat-select formControlName="payment" formControlName="paymentS">
-                <mat-option value="boleto">Boleto</mat-option>
-                <mat-option value="creditCard">Cartão de Crédito</mat-option>
-              </mat-select>
-            </mat-form-field>
-          </form>
-          <p class="dialog-info-price">Valor total</p>
-          <p class="buyer-dialog-paragraph-price">
-            {{ totalAmount | currency: "R$" }}
-          </p>
+      <div class="dialog-info d-flex justify-content-center col-12 col-md-12 col-lg-5">
+        <div class="dialog-info-form">
+          <div class="dialog-info-form">
+            <p class="dialog-info-price">preço</p>
+            <p class="buyer-dialog-paragraph-price">
+              {{ productPrice | currency: "R$" }}
+            </p>
+          </div>
+          <div class="dialog-info-form">
+            <form [formGroup]="transactionForm">
+              <mat-form-field>
+                <mat-label class="dialog-info-price">Quantidade</mat-label>
+                <input
+                  matInput
+                  value="1"
+                  placeholder="1"
+                  [formControl]="quantity"
+                />
+                <mat-hint align="end"> Valor númerico entre 1 e 99</mat-hint>
+                <mat-error *ngIf="quantity.hasError('pattern')">
+                  Entre com um valor númerico
+                </mat-error>
+                <mat-error *ngIf="quantity.hasError('min')">
+                  Insira um valor maior que zero
+                </mat-error>
+                <mat-error *ngIf="quantity.hasError('max')">
+                  Insira um valor menor que 99
+                </mat-error>
+              </mat-form-field>
+              <br />
+              <br />
+              <mat-form-field>
+                <mat-label class="dialog-info-price">Pagamento</mat-label>
+                <mat-select
+                  formControlName="payment"
+                  formControlName="paymentS"
+                >
+                  <mat-option value="boleto">Boleto</mat-option>
+                  <mat-option value="creditCard">Cartão de Crédito</mat-option>
+                </mat-select>
+              </mat-form-field>
+            </form>
+          </div>
+          <div class="dialog-info-form">
+            <p class="dialog-info-price">Valor total</p>
+            <p class="buyer-dialog-paragraph-price">
+              {{ totalAmount | currency: "R$" }}
+            </p>
+          </div>
         </div>
       </div>
     </div>
     <mat-divider></mat-divider>
   </div>
-  <div class="col-12 justify-content-end">
+  <div class="col-12 d-flex justify-content-end">
     <div class="buyer-dialog-buttons">
       <button (click)="OnAddCart(quantity)" mat-raised-button>
         <span class="material-icons"> add_shopping_cart </span>Adicionar

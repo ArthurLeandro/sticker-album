@@ -26,8 +26,13 @@ button {
   padding: 3em;
 }
 
+.dialog-info-form{
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
 .dialog-info-price{
-  color: rgba(0,0,0,.44);
+  color: var(--color-primary-4);
   text-transform: uppercase;
 }
 
@@ -36,3 +41,50 @@ button {
   font-weight: bold;
   padding-top: .4em;
 }
+
+h1{
+  color:var(--color-secondary-1-4);
+}
+
+.buyer-dialog-paragraph{
+  color: var(--color-secondary-1-0);
+}
+
+.image{
+  width: 250px;
+}
+
+
+/*O normal será o col-xl*/
+@media screen and (min-width: 175px) and (max-width:575px){
+  h1{
+    font-size: 30px;
+  }
+
+  .buyer-dialog-paragraph{
+    font-size: 16px;
+    line-height: 1.2em;
+  }
+
+  .image{
+    width: 250px;
+  }
+}/*col*/
+@media screen and (min-width: 576px) and (max-width:767px){
+
+  h1{
+    font-size: 35px;
+  }
+
+  .buyer-dialog-paragraph{
+    font-size: 20px;
+    line-height: 1.6em;
+  }
+
+  .dialog-info-price{
+    font-size: 20px;
+  }
+
+}/*col-sm*/
+@media screen and (min-width: 768px) and (max-width:961px){}/*col-md*/
+@media screen and (min-width: 962px) and (max-width:1199px){}/*col-lg*/

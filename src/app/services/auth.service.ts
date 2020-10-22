@@ -15,7 +15,7 @@ export class AuthService {
   private userSubject: BehaviorSubject<User>;
   public user: Observable<User>;
 
-  constructor(private http: HttpClient) {
+  constructor(private router: Router, private http: HttpClient) {
     this.userSubject = new BehaviorSubject<User>(
       JSON.parse(localStorage.getItem("user"))
     );
@@ -33,33 +33,33 @@ export class AuthService {
    * @param password senha do usuário que estará sendo logado
    */
   public login(username: string, password: string) {
-    return this.http
-      .post<User>(environment.apiUrl + "/users/authenticate", {
-        username,
-        password,
-      })
-      .pipe(
-        // o que retornar será usado para setar a sessão, um token contendo a data de validade e o JWT.
-        tap((res) => {
-          console.log(res);
-          this.SetUserSession(res);
-        })
-      );
-
-    // COMO ESTAVA ANTES
     // return this.http
-    //   .post<User>(`${environment.apiUrl}/users/authenticate`, {
+    //   .post<User>(environment.apiUrl + "/users/authenticate", {
     //     username,
     //     password,
     //   })
     //   .pipe(
-    //     map((user) => {
-    //       // store user details and jwt token in local storage to keep user logged in between page refreshes
-    //       localStorage.setItem("user", JSON.stringify(user));
-    //       this.userSubject.next(user);
-    //       return user;
+    //     // o que retornar será usado para setar a sessão, um token contendo a data de validade e o JWT.
+    //     tap((res) => {
+    //       console.log(res);
+    //       this.SetUserSession(res);
     //     })
     //   );
+
+    // COMO ESTAVA ANTES
+    return this.http
+      .post<User>(`${environment.apiUrl}/users/authenticate`, {
+        username,
+        password,
+      })
+      .pipe(
+        map((user) => {
+          // store user details and jwt token in local storage to keep user logged in between page refreshes
+          localStorage.setItem("user", JSON.stringify(user));
+          this.userSubject.next(user);
+          return user;
+        })
+      );
   }
 
   /**
@@ -82,13 +82,13 @@ export class AuthService {
    * Procedimento público para descontinuar a sessão de um usuário, os dados armazenados no localStorage são removidos.
    */
   public logout() {
-    localStorage.removeItem(environment.JWT_TOKEN_ID || "idToken");
-    localStorage.removeItem(environment.EXPIRATION_TOKEN || " expire_at");
+    // localStorage.removeItem(environment.JWT_TOKEN_ID || "idToken");
+    // localStorage.removeItem(environment.EXPIRATION_TOKEN || " expire_at");
     //COMO ESTAVA ANTES
     // remove user from local storage and set current user to null
-    // localStorage.removeItem("user");
-    // this.userSubject.next(null);
-    // this.router.navigate(["/login"]);
+    localStorage.removeItem("user");
+    this.userSubject.next(null);
+    this.router.navigate(["/login"]);
   }
 
   register(user: User) {

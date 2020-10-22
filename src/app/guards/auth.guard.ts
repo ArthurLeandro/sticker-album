@@ -9,7 +9,8 @@ import {
 import { AuthService } from "../services";
 
 @Injectable({ providedIn: "root" })
-export class AuthGuard implements CanActivate { // TODO olhar se vale a pena implementar ele via Assincroniedade
+export class AuthGuard implements CanActivate {
+  // TODO olhar se vale a pena implementar ele via Assincroniedade
   constructor(private router: Router, private authService: AuthService) {}
 
   canActivate(
@@ -20,6 +21,7 @@ export class AuthGuard implements CanActivate { // TODO olhar se vale a pena imp
     if (user) {
       return true;
     }
+    console.error("Erro ao fazer o login.");
     this.router.navigate(["/login"], { queryParams: { returnUrl: state.url } });
     return false;
   }

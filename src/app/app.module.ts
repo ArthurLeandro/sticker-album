@@ -6,19 +6,13 @@ import { APP_BASE_HREF } from "@angular/common";
 import { AppRoutingModule } from "./app-routing.module";
 import { CarouselModule } from "ngx-owl-carousel-o";
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
-
 import { SharedModule } from "../app/modules/shared/shared.module";
-
 import { AboutComponent } from "./views/about/about.component";
-
 import { AppComponent } from "./app.component";
 import { AuthGuard } from "./guards/auth.guard";
-
 import { JwtInterceptor, ErrorInterceptor } from "./helpers";
 import { fakeBackendProvider } from "./helpers";
-
 import { UsersModule } from "./views/users/users.module";
-
 import { AdminComponent } from "./views/admin/admin.component";
 import { ContactComponent } from "./views/contact/contact.component";
 import { DeveloperComponent } from "./views/developer/developer.component";
@@ -30,9 +24,7 @@ import { ReportsComponent } from "./views/reports/reports.component";
 import { StoreComponent } from "./views/store/store.component";
 import { UnauthenticatedComponent } from "./views/unauthenticated/unauthenticated.component";
 import { UnauthorizedComponent } from "./views/unauthorized/unauthorized.component";
-
 import { NotificationBarComponent } from "./components/notification-bar/notification-bar.component";
-
 import { AlbumComponent } from "./components/album/album.component";
 import { BackCoverComponent } from "./components/album/back-cover/back-cover.component";
 import { FrontCoverComponent } from "./components/album/front-cover/front-cover.component";
@@ -47,7 +39,6 @@ import { MatListModule } from "@angular/material/list";
 import { MatPseudoCheckboxModule } from "@angular/material/core";
 import { MatSidenavModule } from "@angular/material/sidenav";
 import { IntroductionViewerComponent } from "./components/introduction/introduction-viewer.component";
-
 import { NoopAnimationsModule } from "@angular/platform-browser/animations";
 import { MatMenuModule } from "@angular/material/menu";
 import { AlbumViewerComponent } from "./components/introduction/album-viewer/album-viewer.component";

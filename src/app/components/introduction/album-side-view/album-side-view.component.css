@@ -8,3 +8,13 @@
   width: 90%;
   height: 90%;
 }
+
+
+a:hover{
+  color: var(--color-secondary-1-4);
+  background-color: var(--color-complement-1);
+}
+
+a{
+  color: var(--color-secondary-1-3);
+}
