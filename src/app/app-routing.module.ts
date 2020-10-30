@@ -23,6 +23,13 @@ import { AlbumView } from "./views/album-view/album-view.component";
 import { TestComponent } from "./views/test/test.component";
 import { LoaderComponent } from "./components/loader/loader.component";
 import { DevGuard } from "./guards/dev-guard.guard";
+import { ComplementaryDataView } from "./views/users/complementary-data/complementary-data.component";
+import { CreateStickerComponent } from "./views/crud/sticker/create-sticker/create-sticker.component";
+import { DeleteStickerComponent } from "./views/crud/sticker/delete-sticker/delete-sticker.component";
+import { UpdateStickerComponent } from "./views/crud/sticker/update-sticker/update-sticker.component";
+import { CreateAlbumComponent } from "./views/crud/album/create-album/create-album.component";
+import { UpdateAlbumComponent } from "./views/crud/album/update-album/update-album.component";
+import { DeleteAlbumComponent } from "./views/crud/album/delete-album/delete-album.component";
 
 /*
   Extras stuff
@@ -54,7 +61,6 @@ import { DevGuard } from "./guards/dev-guard.guard";
     Utilização:
       No array de rotas você consgue criar um atributo do mesmo tipo da interface da rota, assim você passa o serviço para esse atributo e já estará 
       funcionando.
-
   */
 
 const routes: Routes = [
@@ -73,11 +79,34 @@ const routes: Routes = [
   { path: "unauthenticated", component: UnauthenticatedComponent },
   { path: "logout", redirectTo: "login" },
   { path: "test", component: TestComponent },
-  { path: "loading", component: LoaderComponent },
+  {
+    path: "users/complement/:token",
+    component: ComplementaryDataView,
+  },
+  { path: "loading/:first/:second", component: LoaderComponent },
   { path: "admin", component: AdminComponent, canActivate: [DevGuard] },
   { path: "contact", component: ContactComponent },
   { path: "developer", component: DeveloperComponent, canActivate: [DevGuard] },
   { path: "reports", component: ReportsComponent, canActivate: [DevGuard] },
+  { path: "test", component: TestComponent },
+  { path: "create-album", component: CreateAlbumComponent },
+  {
+    path: "update-album/:id",
+    component: UpdateAlbumComponent,
+  },
+  {
+    path: "delete-album/:id",
+    component: DeleteAlbumComponent,
+  },
+  { path: "create-sticker", component: CreateStickerComponent },
+  {
+    path: "update-sticker/:id",
+    component: UpdateStickerComponent,
+  },
+  {
+    path: "delete-sticker/:id",
+    component: DeleteStickerComponent,
+  },
   { path: "**", component: NotFoundComponent },
 ];
 

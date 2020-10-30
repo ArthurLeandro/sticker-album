@@ -25,4 +25,8 @@ export interface ISticker {
    * enum - como o sticker ficará na tela
    */
   type: TypeOfSticker;
+  /**
+   * string - Nome da figurinha
+   */
+  name: string;
 }

@@ -7,7 +7,8 @@ import {
   ConfirmDialogModel,
   ConfirmDialogComponent,
 } from "src/app/components/confirm-dialog/confirm-dialog.component";
-import { MatDialog } from "@angular/material/dialog";
+import { MatDialog, MatDialogConfig } from "@angular/material/dialog";
+import { FinalizeUserDataComponent } from "../../../components/dialogs/finalize-user-data/finalize-user-data.component";
 
 @Component({
   selector: "app-login",
@@ -100,5 +101,36 @@ export class LoginComponent implements OnInit {
       this.alertService.clear();
       //this.authService.recoverPassword(this.resultRecoverPassword);
     }
+  }
+
+  public OpenComplementDialog() {
+    let aux = this.f;
+    let dialogConfig = new MatDialogConfig();
+    dialogConfig.height = "600px";
+    dialogConfig.width = "1200px";
+    dialogConfig.data = {
+      link: aux,
+    };
+    let dialogRef = this.dialog.open(FinalizeUserDataComponent, dialogConfig);
+    dialogRef.afterClosed().subscribe(() => {
+      console.log("Closed Dialog ");
+      this.authService
+        .login(aux["username"].value, aux["password"].value)
+        .pipe(first())
+        .subscribe(
+          (data) => {
+            // this.router.navigate([this.returnUrl]);
+            // this.router.navigate(["/album-view"]);
+            console.log(
+              "User was logged with sucess, maybe call the service of notification"
+            );
+          },
+          (error) => {
+            console.log("Error occurred during auth " + error);
+            this.alertService.error(error);
+            this.loading = false;
+          }
+        );
+    });
   }
 }

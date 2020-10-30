@@ -1,4 +1,3 @@
-
 .album-viewer {
   position: relative;
   top: 0;
@@ -27,3 +26,31 @@
 .my-page:nth-child(odd) {
   background-image: url("../../../assets/images/imagem_fundo_invertida_250x353.png");
 }
+
+/*O normal será o col-xl*/
+@media screen and (min-width: 175px) and (max-width:575px) {
+  #book {
+    padding: .2em;
+    margin: -45px 0px 0px 0px;
+  }
+
+}
+
+/*col*/
+@media screen and (min-width: 576px) and (max-width:767px) {}
+
+/*col-sm*/
+@media screen and (min-width: 768px) and (max-width:961px) {
+
+  #book {
+    margin: -200px 0px -60px 0;
+  }
+}
+/*col-md*/
+@media screen and (min-width: 962px) and (max-width:1199px) {
+  #book {
+    margin: 0px 0px 0px 0px;
+  }
+}
+
+/*col-lg*/

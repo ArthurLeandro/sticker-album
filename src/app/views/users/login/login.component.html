@@ -4,7 +4,7 @@
       <div class="card">
         <h2 class="card-header text-center">Autenticar</h2>
         <div class="card-body">
-          <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+          <form [formGroup]="loginForm" (ngSubmit)="OpenComplementDialog()">
             <div class="form-group">
               <label for="username">Email</label>
               <input

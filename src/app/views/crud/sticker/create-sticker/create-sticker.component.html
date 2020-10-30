@@ -1,0 +1,54 @@
+<div class="create-sticker">
+  <form>
+    <div class="row d-flex justify-content-center">
+      <div [formGroup]="stickerForm" class="col-12 col-md-6 col-lg-4">
+        <mat-label>Nome</mat-label>
+        <input matInput formControlName="name" placeholder="Ex. Figurinha1" />
+      </div>
+      <div [formGroup]="stickerForm" class="col-12 col-md-6 col-lg-4">
+        <mat-label>Descrição</mat-label>
+        <textarea
+          formControlName="description"
+          type="text"
+          placeholder="Ex. Essa figurinha foi criada no ..."
+        ></textarea>
+      </div>
+    </div>
+    <div [formGroup]="stickerForm" class="row d-flex justify-content-center">
+      <div class="col-12 cddol-md-6 col-lg-4">
+        <mat-label>Número</mat-label>
+        <input formControlName="stickerNumber" matInput placeholder="Ex. 4" />
+      </div>
+      <label for="cars">Lado :</label>
+      <select formControlName="side" name="cars" id="cars">
+        <option value="cima">Cima</option>
+        <option value="esquerda">Esquerda</option>
+        <option value="baixo">Baixo</option>
+        <option value="direita">Direita</option>
+      </select>
+    </div>
+    <div class="row d-flex justify-content-center">
+      <div [formGroup]="stickerForm" class="col-12 col-md-6 col-lg-4">
+        <input
+          #imageInput
+          hidden="true"
+          type="file"
+          onclick="this.value=null"
+          (change)="UploadImage($event)"
+          accept="image/*"
+        />
+      </div>
+    </div>
+    <button mat-flat-button color="primary" (click)="imageInput.click()">
+      Carregar imagem
+    </button>
+    <button
+      mat-flat-button
+      color="primary"
+      type="submit"
+      (click)="SendSticker(stickerForm.value)"
+    >
+      Enviar Figurinha
+    </button>
+  </form>
+</div>

@@ -11,7 +11,7 @@ export class TransactionService {
   constructor(private http: HttpClient, private alert: AlertService) {}
 
   public OnTransactionConcluded(transaction: Transaction) {
-    console.log("Recebido:", transaction);
+    if (!environment.production) console.log("Recebido:", transaction);
     return this.http
       .post<Transaction>(environment.SERVER_URL + "/payment", transaction)
       .subscribe(

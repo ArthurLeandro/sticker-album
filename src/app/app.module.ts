@@ -57,6 +57,14 @@ import { MatInputModule } from "@angular/material/input";
 import { MatSelectModule } from "@angular/material/select";
 import { LoaderComponent } from "./components/loader/loader.component";
 import { DevGuard } from "./guards/dev-guard.guard";
+import { ComplementaryDataView } from "./views/users/complementary-data/complementary-data.component";
+import { FinalizeUserDataComponent } from "./components/dialogs/finalize-user-data/finalize-user-data.component";
+import { CreateStickerComponent } from './views/crud/create-sticker/create-sticker.component';
+import { DeleteStickerComponent } from './views/crud/delete-sticker/delete-sticker.component';
+import { UpdateStickerComponent } from './views/crud/update-sticker/update-sticker.component';
+import { CreateAlbumComponent } from './views/crud/album/create-album/create-album.component';
+import { DeleteAlbumComponent } from './views/crud/album/delete-album/delete-album.component';
+import { UpdateAlbumComponent } from './views/crud/album/update-album/update-album.component';
 
 @NgModule({
   imports: [
@@ -79,7 +87,6 @@ import { DevGuard } from "./guards/dev-guard.guard";
     MatButtonModule,
     HttpClientModule,
     ReactiveFormsModule,
-    MatFormFieldModule,
     MatSidenavModule,
     SharedModule,
     NoopAnimationsModule,
@@ -94,7 +101,7 @@ import { DevGuard } from "./guards/dev-guard.guard";
     AlbumService,
     DevGuard,
   ],
-  entryComponents: [BuyerDialogComponent],
+  entryComponents: [BuyerDialogComponent, FinalizeUserDataComponent],
   declarations: [
     AboutComponent,
     AlbumComponent,
@@ -129,6 +136,14 @@ import { DevGuard } from "./guards/dev-guard.guard";
     TwoStickersComponent,
     FooterComponent,
     LoaderComponent,
+    ComplementaryDataView,
+    FinalizeUserDataComponent,
+    CreateStickerComponent,
+    DeleteStickerComponent,
+    UpdateStickerComponent,
+    CreateAlbumComponent,
+    DeleteAlbumComponent,
+    UpdateAlbumComponent,
   ],
   bootstrap: [AppComponent],
 })

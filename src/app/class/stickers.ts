@@ -45,6 +45,7 @@ export class Sticker implements ISticker {
     this.type = type;
     this.isCover = cover;
   }
+  name: string;
 }
 
 export class AllStickers {

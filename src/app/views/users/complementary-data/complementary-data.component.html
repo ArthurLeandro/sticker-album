@@ -1,0 +1,47 @@
+<div class="complement">
+  <div class="complement-introduction text-center">
+    <p>Para concluir o cadastro de {{ token }} insira os dados a seguir.</p>
+  </div>
+  <div
+    class="row complement-data d-flex justify-content-center align-items-center"
+  >
+    <form
+      class="col-12 col-md-8 col-lg-6"
+      [formGroup]="dataComplementaryForm"
+      (submit)="OnSubmit()"
+    >
+      <div>
+        <mat-form-field>
+          <mat-label>Telefone de Contato</mat-label>
+          <input matInput value=" " formControlName="cellphone" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Endereço</mat-label>
+          <input matInput value=" " formControlName="adress" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Ano de Nascimento</mat-label>
+          <input matInput value=" " formControlName="birthDate" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Escolaridade</mat-label>
+          <input matInput value=" " formControlName="schoolarship" />
+        </mat-form-field>
+      </div>
+      <div>
+        <mat-form-field>
+          <mat-label>Instituição de Ensino</mat-label>
+          <input matInput value=" " formControlName="institution" />
+        </mat-form-field>
+      </div>
+      <br />
+      <input type="submit" class="btn btn-primary mt-4" value="Salvar" />
+    </form>
+  </div>
+</div>
